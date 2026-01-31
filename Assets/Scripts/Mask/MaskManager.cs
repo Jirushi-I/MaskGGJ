@@ -11,8 +11,9 @@ public class MaskManager : MonoBehaviour {
     private Mask currentMask;
     private int currentMaskIndex = -1;
 
-    void Start () {
+    public void OnEnable() {
         Instance = this;
+        //SignalManager.Instance.OnUnlockTheMask += UnlockMask;
     }
 
     void Update () {
@@ -26,13 +27,15 @@ public class MaskManager : MonoBehaviour {
         } else if (Keyboard.current.digit0Key.wasPressedThisFrame) {
             UnequipCurrentMask();
         }
+
+
+
     }
 
     public Mask GetCurrentMask()
     {
         return currentMask;
     }
-
 
     private void EquipMask(int index) {
         // Check if the index is within the valid range
@@ -57,10 +60,26 @@ public class MaskManager : MonoBehaviour {
 
         currentMaskIndex = index;
         currentMask = availableMasks[index];
+
+        if (!currentMask.IsUnlockMask) {
+            Debug.LogWarning(currentMask + " is not unlock");
+            return;
+        }
+
         currentMask.Equip();
     }
 
-       public void UnequipCurrentMask()
+    private void UnlockMask(string maskName) {
+        foreach (var mask in availableMasks) {
+            if (mask.MaskName == maskName) {
+                mask.Unlock();
+                return;
+            }
+        }
+        Debug.LogWarning($"Mask '{maskName}' not found!");
+    }
+
+    public void UnequipCurrentMask()
     {
         if (currentMask != null && currentMask.IsEquipped)
         {
