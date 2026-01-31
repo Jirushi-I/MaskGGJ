@@ -1,0 +1,40 @@
+:: StoryTitle
+Test
+
+
+:: StoryData
+{
+  "ifid": "C61E9830-FE6F-4EE5-BDBD-4AD1E3C9FD54",
+  "format": "Harlowe",
+  "format-version": "3.3.9",
+  "start": "Untitled Passage",
+  "zoom": 1
+}
+
+
+:: Option one {"position":"600,125","size":"100,100"}
+Test
+
+[[Untitled Passage]] 
+
+
+:: Option two {"position":"600,250","size":"100,100"}
+Test
+
+[[Untitled Passage]] 
+
+[[Option one]] 
+
+
+:: Start {"position":"250,250","size":"100,100"}
+Start
+
+[[Untitled Passage]] 
+
+
+:: Untitled Passage {"position":"375,125","size":"200,200"}
+This is a test 
+
+[[Option one]]
+
+[[Option two]]
