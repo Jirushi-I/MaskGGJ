@@ -13,7 +13,11 @@ public class MaskManager : MonoBehaviour {
 
     public void OnEnable() {
         Instance = this;
-        //SignalManager.Instance.OnUnlockTheMask += UnlockMask;
+        SignalManager.Instance.OnUnlockTheMask += UnlockMask;
+    }
+
+    public void OnDisable() {
+        SignalManager.Instance.OnUnlockTheMask -= UnlockMask;
     }
 
     void Update () {

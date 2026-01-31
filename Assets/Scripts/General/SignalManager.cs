@@ -5,7 +5,7 @@ public class SignalManager : MonoBehaviour
 {
     public static SignalManager Instance { get; private set; }
 
-    void Start()
+    void Awake()
     {
         if (Instance == null) {
             Instance = this;
