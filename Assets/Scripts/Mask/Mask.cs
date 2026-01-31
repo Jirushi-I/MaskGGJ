@@ -6,9 +6,13 @@ public abstract class Mask: MonoBehaviour {
     [SerializeField] protected GameObject visualMask; //TODO make the good Type
     [SerializeField] protected Image filterColorImage;
     [SerializeField] protected string maskName;
+    [SerializeField] protected bool isUnlock = false;
 
     protected bool isEquipped = false;
     protected Color defaultFilterColors;
+
+
+   
 
     public void Start() {
         if (filterColorImage != null)
@@ -21,17 +25,21 @@ public abstract class Mask: MonoBehaviour {
 
     public bool IsEquipped => isEquipped;
     public string MaskName => maskName;
+    public bool IsUnlockMask => isUnlock;
 
     public virtual void Equip()
     {
-        if (!isEquipped)
+        if (isUnlock)
+            Debug.Log(maskName + "is not unlock yet ");
+
+        if (!isEquipped && isUnlock)
         {
             isEquipped = true;
             visualMask?.SetActive(true);
             ApplyCameraEffect();
+            Debug.Log("Equipped " + maskName);
         }
 
-        Debug.Log("Equipped " + maskName);
     }
     public virtual void Unequip()
     {
@@ -44,7 +52,13 @@ public abstract class Mask: MonoBehaviour {
 
         Debug.Log("Unequipped " + maskName);
     }
-
+    public virtual void Unlock() {
+        if (isUnlock) {
+            Debug.Log(maskName + "is already unlock");
+        }
+        isUnlock = true;
+        Debug.Log(maskName + "is unlock");
+    }
 
     protected abstract void ApplyCameraEffect();
     protected abstract void RemoveCameraEffect();
