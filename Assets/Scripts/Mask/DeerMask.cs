@@ -1,10 +1,10 @@
 using UnityEngine;
 
-public class RedMask : Mask
-{
-    [SerializeField] private Color blueFilterColors = Color.red;
-    [SerializeField] private float filterIntensity = 0.5f;
+public class Deer : Mask {
 
+    [SerializeField] private Color deerFilterColors = new Color(1,1,1);
+    [SerializeField] private float filterIntensity = 0.6f;
+    
 
     protected override void ApplyCameraEffect() {
         if (filterColorImage == null) {
@@ -12,7 +12,7 @@ public class RedMask : Mask
             return;
         }
 
-        Color targetColor = Color.Lerp(defaultFilterColors, blueFilterColors, filterIntensity);
+        Color targetColor = Color.Lerp(defaultFilterColors, deerFilterColors, filterIntensity);
         filterColorImage.color = targetColor;
 
         Debug.Log(maskName + " is Applied");

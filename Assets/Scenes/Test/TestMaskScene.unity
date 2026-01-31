@@ -590,9 +590,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 556348111}
-  - component: {fileID: 556348112}
+  - component: {fileID: 556348113}
   m_Layer: 0
-  m_Name: GreenMask
+  m_Name: LionMask
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -613,7 +613,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 655502317}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &556348112
+--- !u!114 &556348113
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -624,13 +624,13 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9626a29c93423bf408d274af3feb9623, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: '::'
+  m_EditorClassIdentifier: Assembly-CSharp::GreenMask
   visualMask: {fileID: 1048537960}
   filterColorImage: {fileID: 85996926}
-  maskName: Green Mask
+  maskName: Lion Mask
   isUnlock: 0
-  blueFilterColors: {r: 0, g: 1, b: 0, a: 1}
-  filterIntensity: 0.5
+  lionFilterColors: {r: 0.81, g: 0.85, b: 0.25, a: 1}
+  filterIntensity: 0.6
 --- !u!1 &655502315
 GameObject:
   m_ObjectHideFlags: 0
@@ -661,8 +661,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MaskManager
   availableMasks:
-  - {fileID: 1794244616}
-  - {fileID: 556348112}
+  - {fileID: 1794244618}
+  - {fileID: 556348113}
   - {fileID: 1206432972}
   playerCamera: {fileID: 554643561}
 --- !u!4 &655502317
@@ -806,7 +806,7 @@ GameObject:
   - component: {fileID: 1206432971}
   - component: {fileID: 1206432972}
   m_Layer: 0
-  m_Name: RedMask
+  m_Name: OxMask
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -838,13 +838,13 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8300a2683e4b61b438559c8ca64e580a, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: '::'
+  m_EditorClassIdentifier: Assembly-CSharp::RedMask
   visualMask: {fileID: 1048537960}
   filterColorImage: {fileID: 85996926}
-  maskName: Red Camera
+  maskName: Ox Mask
   isUnlock: 0
-  blueFilterColors: {r: 1, g: 0, b: 0, a: 1}
-  filterIntensity: 0.5
+  oxFilterColors: {r: 1, g: 0, b: 0, a: 1}
+  filterIntensity: 0.7
 --- !u!1 &1385502991
 GameObject:
   m_ObjectHideFlags: 0
@@ -922,32 +922,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1794244617}
-  - component: {fileID: 1794244616}
+  - component: {fileID: 1794244618}
   m_Layer: 0
-  m_Name: BlueMask
+  m_Name: DeerMask
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1794244616
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1794244615}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 981b7740f608ac043b2631c2c4aeb64b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: '::'
-  visualMask: {fileID: 1048537960}
-  filterColorImage: {fileID: 85996926}
-  maskName: Blue Mask
-  isUnlock: 0
-  blueFilterColors: {r: 0, g: 0, b: 1, a: 1}
-  filterIntensity: 0.7
 --- !u!4 &1794244617
 Transform:
   m_ObjectHideFlags: 0
@@ -963,6 +945,24 @@ Transform:
   m_Children: []
   m_Father: {fileID: 655502317}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1794244618
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1794244615}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 981b7740f608ac043b2631c2c4aeb64b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Deer
+  visualMask: {fileID: 1048537960}
+  filterColorImage: {fileID: 85996926}
+  maskName: Deer Mask
+  isUnlock: 0
+  deerFilterColors: {r: 1, g: 1, b: 1, a: 1}
+  filterIntensity: 0.6
 --- !u!1 &1876822998
 GameObject:
   m_ObjectHideFlags: 0

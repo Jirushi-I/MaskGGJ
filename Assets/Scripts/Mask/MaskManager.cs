@@ -6,7 +6,6 @@ public class MaskManager : MonoBehaviour {
     public static MaskManager Instance { get; private set; }
 
     [SerializeField] private Mask[] availableMasks;
-    [SerializeField] private Camera playerCamera;
 
     private Mask currentMask;
     private int currentMaskIndex = -1;
