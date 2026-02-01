@@ -1932,6 +1932,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1281753032}
+        m_TargetAssemblyTypeName: Starteractable, Assembly-CSharp
+        m_MethodName: ResetPlayer
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &688398089
 GameObject:
   m_ObjectHideFlags: 0
@@ -3337,6 +3349,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1281753032}
+        m_TargetAssemblyTypeName: Starteractable, Assembly-CSharp
+        m_MethodName: ResetPlayer
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1148141562
 GameObject:
   m_ObjectHideFlags: 0
@@ -4043,6 +4067,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8854274110494164432, guid: 6ff058eab618eec47a708fb899e42ebd, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 382342357}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4059,6 +4087,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f082b861af5bea840abc10ef5f3f99bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LocalMusicManager
+--- !u!114 &1281753032 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8854274110494164432, guid: 6ff058eab618eec47a708fb899e42ebd, type: 3}
+  m_PrefabInstance: {fileID: 1281753030}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4544f4d99e490c841b8276adb8668b04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Starteractable
 --- !u!1 &1284848746
 GameObject:
   m_ObjectHideFlags: 0
@@ -6645,6 +6684,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1281753031}
         m_TargetAssemblyTypeName: LocalMusicManager, Assembly-CSharp
         m_MethodName: SetMaskLion
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1281753032}
+        m_TargetAssemblyTypeName: Starteractable, Assembly-CSharp
+        m_MethodName: ResetPlayer
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
