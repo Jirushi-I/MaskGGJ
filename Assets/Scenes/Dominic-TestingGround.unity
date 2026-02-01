@@ -3782,7 +3782,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ed4abaafdbe28848a7f5e18606af126, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Head
-  sensitivity: 5
+  sensitivity: 20
   minPitch: 20
   maxPitch: 45
 --- !u!1 &1905497556
