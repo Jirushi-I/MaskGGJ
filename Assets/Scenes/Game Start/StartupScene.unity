@@ -759,7 +759,7 @@ MonoBehaviour:
   UnloadEvent: 0
   Banks:
   - Music
-  - 
+  - SFX
   CollisionTag: 
   PreloadSamples: 0
 --- !u!4 &2076108232

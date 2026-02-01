@@ -16,7 +16,7 @@ public class Head : MonoBehaviour
 
     void Awake()
     {
-        controller = GetComponent<CharacterController>();
+        controller = GetComponentInParent<CharacterController>();
     }
 
     // Update is called once per frame
@@ -29,6 +29,9 @@ public class Head : MonoBehaviour
 
     public void Rotate(InputAction.CallbackContext context)
     {
+        if (controller.enabled == false) return;
+
+
         Vector2 input = context.ReadValue<Vector2>() * sensitivity * Time.deltaTime;
 
         yaw += input.x;
