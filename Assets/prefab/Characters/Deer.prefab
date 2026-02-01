@@ -83,7 +83,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 21300000, guid: b34cfa7eb5f5aa947bf7aaf5f925a7cc, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 82e397a621233e14190a51ddc3e97178, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -245,8 +245,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3a9587df869db442b33ff5b2f0bfb92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Interactable
+  player: {fileID: 0}
   interact: {fileID: 0}
   mask: {fileID: 0}
+  getMask: {fileID: 0}
+  others:
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!114 &8677626540340093268
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -302,19 +307,21 @@ MonoBehaviour:
   - Example4_dialogue
   - Item_LookUp
   - Laura
+  - MonsieurStag
   - MrCube
   - NPCOnly
+  - ox
   - QuestChartDemo
   - Test
   - TriggeredDude
   - Witch
-  assignedIndex: 12
-  assignedID: 66217
-  assignedDialogue: Test
+  assignedIndex: 9
+  assignedID: 45481
+  assignedDialogue: MonsieurStag
   interactionCount: 0
   alias: Mister Deer
   overrideStartNode: -1
-  defaultNPCSprite: {fileID: 21300000, guid: 386589efb5fbf274590df95f4eca2846, type: 3}
+  defaultNPCSprite: {fileID: 21300000, guid: 83621f3be95e29c4eb698613231bc89c, type: 3}
   defaultPlayerSprite: {fileID: 21300000, guid: ca1397691a4e7d54e88268b636508a09, type: 3}
   targetManager: {fileID: 0}
   preload: 0
