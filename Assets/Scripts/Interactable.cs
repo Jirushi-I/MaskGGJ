@@ -62,7 +62,7 @@ public class Interactable : MonoBehaviour
 
             if (maskManagerComponent == null) return;
             Mask currentMask = maskManagerComponent?.GetCurrentMask();
-            if (this.gameObject.GetComponentInParent<GameObject>().name == "Lion")
+            if (this.transform.parent.name == "Lion")
             {
                 if (currentMask == null || currentMask.gameObject != mask.gameObject)
                 {
@@ -72,7 +72,7 @@ public class Interactable : MonoBehaviour
                 {
                     this.gameObject.GetComponent<VIDE_Assign>().overrideStartNode = 5;
                 }
-            } else if (this.gameObject.GetComponentInParent<GameObject>().name == "Ox")
+            } else if (this.transform.parent.name == "Ox")
             {
                 if (currentMask == null || currentMask.gameObject != mask.gameObject)
                 {
@@ -83,7 +83,7 @@ public class Interactable : MonoBehaviour
                     this.gameObject.GetComponent<VIDE_Assign>().overrideStartNode = 1;
                 }
             }
-            else if (this.gameObject.GetComponentInParent<GameObject>().name == "Deer")
+            else if (this.transform.parent.name == "Deer")
             {
                 if (currentMask == null || currentMask.gameObject != mask.gameObject)
                 {
