@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 268dc70b105993846a123be43345df63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fileIndex: 14
+  fileIndex: 13
   skinIndex: 0
   loadTag: 
   startID: 0
@@ -52,7 +52,7 @@ MonoBehaviour:
   currentID: 66217
   autosave: 1
   previewPanning: 1
-  currentDiag: 14
+  currentDiag: 13
   locEdit: 0
   pNodeID: 18
   aNodeID: 2
@@ -275,7 +275,7 @@ MonoBehaviour:
       x: 150
       y: 30
       width: 348
-      height: 138.04666
+      height: 138.05
     pTag: 
     expand: 0
     sprite: {fileID: 0}
@@ -321,7 +321,7 @@ MonoBehaviour:
       x: 140
       y: -310
       width: 348
-      height: 243.66667
+      height: 243.66501
     pTag: 
     expand: 0
     sprite: {fileID: 0}
@@ -353,7 +353,7 @@ MonoBehaviour:
       x: 920
       y: -450
       width: 348
-      height: 167.09334
+      height: 167.095
     pTag: 
     expand: 0
     sprite: {fileID: 0}
@@ -383,7 +383,7 @@ MonoBehaviour:
       x: 930
       y: -260
       width: 348
-      height: 138.04666
+      height: 138.05
     pTag: 
     expand: 0
     sprite: {fileID: 0}
@@ -413,7 +413,7 @@ MonoBehaviour:
       x: 930
       y: -130
       width: 348
-      height: 138.04666
+      height: 138.05
     pTag: 
     expand: 0
     sprite: {fileID: 0}
@@ -443,7 +443,7 @@ MonoBehaviour:
       x: 1680
       y: -420
       width: 348
-      height: 152.57333
+      height: 152.57
     pTag: 
     expand: 0
     sprite: {fileID: 0}
@@ -474,7 +474,7 @@ MonoBehaviour:
       x: 1670
       y: -250
       width: 348
-      height: 167.09334
+      height: 167.095
     pTag: 
     expand: 0
     sprite: {fileID: 0}
@@ -506,7 +506,7 @@ MonoBehaviour:
       x: 1670
       y: -40
       width: 348
-      height: 138.04666
+      height: 138.05
     pTag: 
     expand: 0
     sprite: {fileID: 0}
@@ -551,7 +551,7 @@ MonoBehaviour:
       x: 2050
       y: -260
       width: 348
-      height: 171.09334
+      height: 74
     pTag: 
     expand: 0
     sprite: {fileID: 0}
@@ -564,14 +564,14 @@ MonoBehaviour:
       extraData: ExtraData
       inputSetIndex: 13
       outputNodeIndex: -1
-      outActionIndex: -1
+      outActionIndex: 7
       showmore: 0
       outRect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 0
-        height: 0
+        x: 301
+        y: 63
+        width: 30
+        height: 32
       sprites: {fileID: 0}
       audios: {fileID: 0}
       visible: 1
@@ -581,7 +581,7 @@ MonoBehaviour:
       x: 2420
       y: -210
       width: 348
-      height: 138.04666
+      height: 138.05
     pTag: 
     expand: 0
     sprite: {fileID: 0}
@@ -626,7 +626,7 @@ MonoBehaviour:
       x: 2040
       y: -40
       width: 348
-      height: 171.09334
+      height: 74
     pTag: 
     expand: 0
     sprite: {fileID: 0}
@@ -658,7 +658,7 @@ MonoBehaviour:
       x: 2400
       y: 130
       width: 348
-      height: 152.57333
+      height: 152.57
     pTag: 
     expand: 0
     sprite: {fileID: 0}
@@ -671,14 +671,14 @@ MonoBehaviour:
       extraData: ExtraData
       inputSetIndex: 16
       outputNodeIndex: -1
-      outActionIndex: -1
+      outActionIndex: 7
       showmore: 0
       outRect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 0
-        height: 0
+        x: 301
+        y: 63
+        width: 30
+        height: 32
       sprites: {fileID: 0}
       audios: {fileID: 0}
       visible: 1
@@ -688,7 +688,7 @@ MonoBehaviour:
       x: 2400
       y: -40
       width: 348
-      height: 138.04666
+      height: 138.05
     pTag: 
     expand: 0
     sprite: {fileID: 0}
@@ -750,7 +750,7 @@ MonoBehaviour:
       x: 1290
       y: -750
       width: 348
-      height: 218.66666
+      height: 218.67
     pTag: 
     expand: 0
     sprite: {fileID: 0}
@@ -780,7 +780,7 @@ MonoBehaviour:
       x: 1650
       y: -900
       width: 348
-      height: 138.04666
+      height: 138.05
     pTag: 
     expand: 0
     sprite: {fileID: 0}
@@ -870,7 +870,7 @@ MonoBehaviour:
       x: 2030
       y: -810
       width: 348
-      height: 204.14001
+      height: 74
     pTag: 
     expand: 0
     sprite: {fileID: 0}
@@ -901,7 +901,7 @@ MonoBehaviour:
       x: 1650
       y: -610
       width: 348
-      height: 152.57333
+      height: 152.57
     pTag: 
     expand: 0
     sprite: {fileID: 0}
@@ -931,7 +931,7 @@ MonoBehaviour:
       x: 2400
       y: -860
       width: 348
-      height: 138.04666
+      height: 74
     pTag: 
     expand: 0
     sprite: {fileID: 0}
@@ -991,7 +991,7 @@ MonoBehaviour:
       x: 2780
       y: -1060
       width: 348
-      height: 204.14001
+      height: 74
     pTag: 
     expand: 0
     sprite: {fileID: 0}
@@ -1004,7 +1004,7 @@ MonoBehaviour:
       extraData: ExtraData
       inputSetIndex: 24
       outputNodeIndex: -1
-      outActionIndex: 4
+      outActionIndex: 7
       showmore: 0
       outRect:
         serializedVersion: 2
@@ -1021,7 +1021,7 @@ MonoBehaviour:
       x: 3150
       y: -1030
       width: 348
-      height: 138.04666
+      height: 74
     pTag: 
     expand: 0
     sprite: {fileID: 0}
@@ -1034,7 +1034,7 @@ MonoBehaviour:
       extraData: ExtraData
       inputSetIndex: 25
       outputNodeIndex: -1
-      outActionIndex: 4
+      outActionIndex: 7
       showmore: 0
       outRect:
         serializedVersion: 2
@@ -1051,7 +1051,7 @@ MonoBehaviour:
       x: 3150
       y: -890
       width: 348
-      height: 129
+      height: 74
     pTag: 
     expand: 0
     sprite: {fileID: 0}
@@ -1064,14 +1064,14 @@ MonoBehaviour:
       extraData: ExtraData
       inputSetIndex: 26
       outputNodeIndex: -1
-      outActionIndex: -1
+      outActionIndex: 7
       showmore: 0
       outRect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 0
-        height: 0
+        x: 301
+        y: 63
+        width: 30
+        height: 23
       sprites: {fileID: 0}
       audios: {fileID: 0}
       visible: 1
@@ -1081,7 +1081,7 @@ MonoBehaviour:
       x: 2400
       y: -710
       width: 348
-      height: 129
+      height: 74
     pTag: 
     expand: 0
     sprite: {fileID: 0}
@@ -1094,14 +1094,14 @@ MonoBehaviour:
       extraData: ExtraData
       inputSetIndex: 27
       outputNodeIndex: -1
-      outActionIndex: -1
+      outActionIndex: 7
       showmore: 0
       outRect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 0
-        height: 0
+        x: 301
+        y: 63
+        width: 30
+        height: 32
       sprites: {fileID: 0}
       audios: {fileID: 0}
       visible: 1
@@ -1111,7 +1111,7 @@ MonoBehaviour:
       x: 2400
       y: -570
       width: 348
-      height: 138.04666
+      height: 138.05
     pTag: 
     expand: 0
     sprite: {fileID: 0}
@@ -1174,7 +1174,7 @@ MonoBehaviour:
       x: 3150
       y: -1330
       width: 348
-      height: 282.23334
+      height: 74
     pTag: 
     expand: 0
     sprite: {fileID: 0}
@@ -1329,8 +1329,8 @@ MonoBehaviour:
       serializedVersion: 2
       x: 2060
       y: -450
-      width: 200
-      height: 170
+      width: 224
+      height: 74
     ID: 32
     outPlayerIndex: -1
     outActionIndex: -1
@@ -1370,8 +1370,8 @@ MonoBehaviour:
       serializedVersion: 2
       x: 3560
       y: -1100
-      width: 200
-      height: 170
+      width: 224
+      height: 74
     ID: 33
     outPlayerIndex: -1
     outActionIndex: 5
@@ -1414,8 +1414,8 @@ MonoBehaviour:
       serializedVersion: 2
       x: 3790
       y: -1100
-      width: 200
-      height: 170
+      width: 224
+      height: 74
     ID: 34
     outPlayerIndex: -1
     outActionIndex: 6
@@ -1449,9 +1449,53 @@ MonoBehaviour:
       serializedVersion: 2
       x: 4000
       y: -1100
+      width: 224
+      height: 74
+    ID: 35
+    outPlayerIndex: -1
+    outActionIndex: -1
+    more: 0
+    ovrStartNode: -1
+    renameDialogue: 
+  - pauseHere: 0
+    gameObjectName: Interactable_Test
+    methodName: ResetPlayer
+    nameIndex: 1
+    methodIndex: 2
+    paramIndex: 0
+    opts:
+    - '[No method]'
+    - Interact
+    - ResetPlayer
+    - getMaskSound
+    - CallNext
+    - SelectChoice
+    - GetAssigned
+    - AssignNew
+    - SaveState
+    - LoadState
+    - OnBeforeSerialize
+    - OnAfterDeserialize
+    nameOpts:
+    - '[No object]'
+    - Interactable_Test
+    - Interactable_Test
+    - Interactable_Test
+    - UIMANAGER
+    - CinemachineBrain
+    - SignalManager
+    - MaskManager
+    param_bool: 0
+    param_string: 
+    param_int: 0
+    param_float: 0
+    rect:
+      serializedVersion: 2
+      x: 3180
+      y: -450
       width: 200
       height: 170
-    ID: 35
+    ID: 36
     outPlayerIndex: -1
     outActionIndex: -1
     more: 0
