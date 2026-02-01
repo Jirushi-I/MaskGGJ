@@ -9,6 +9,8 @@ public class LionMask : Mask
     [SerializeField][Range(0f, 20f)] private float blurAmount = 0f;
     [SerializeField][Range(0f, 1f)] private float centerAlpha = 0.1f;
 
+    [SerializeField] private Sprite spriteMasks;
+
 
     protected override void ApplyCameraEffect() {
         if (filterColorImage == null) {
@@ -16,6 +18,7 @@ public class LionMask : Mask
             return;
         }
 
+        imageMask.sprite = spriteMasks;
         filterColorImage.color = lionFilterColors;
         UpdateMaterial();
         Debug.Log(maskName + " is Applied");
@@ -25,6 +28,7 @@ public class LionMask : Mask
         if (filterColorImage == null)
             return;
 
+        imageMask.sprite = imageDefaultMask;
         filterColorImage.color = defaultFilterColors;
         Debug.Log(maskName + " is removed");
     }

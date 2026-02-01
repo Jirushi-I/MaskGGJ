@@ -8,11 +8,9 @@ public class MaskManager : MonoBehaviour {
     public static MaskManager Instance { get; private set; }
 
     [SerializeField] private Mask[] availableMasks;
-    [SerializeField] private Sprite[] spriteMasks;
 
     private Mask currentMask;
     private int currentMaskIndex = -1;
-    public Image mask;
 
     public void OnEnable() {
         Instance = this;
@@ -27,13 +25,10 @@ public class MaskManager : MonoBehaviour {
 
         if (Keyboard.current.digit1Key.wasPressedThisFrame) {
             EquipMask(0);
-            mask.sprite = spriteMasks[0];
         } else if (Keyboard.current.digit2Key.wasPressedThisFrame) {
             EquipMask(1);
-            mask.sprite = spriteMasks[1];
         } else if (Keyboard.current.digit3Key.wasPressedThisFrame) {
             EquipMask(2);
-            mask.sprite = spriteMasks[2];
         } else if (Keyboard.current.digit0Key.wasPressedThisFrame) {
             UnequipCurrentMask();
         }
@@ -45,6 +40,7 @@ public class MaskManager : MonoBehaviour {
     }
 
     private void EquipMask(int index) {
+
         // Check if the index is within the valid range
          if (index < 0 || index >= availableMasks.Length)
         {
@@ -67,6 +63,8 @@ public class MaskManager : MonoBehaviour {
 
         currentMaskIndex = index;
         currentMask = availableMasks[index];
+
+        Debug.Log(currentMask + " is mask" );
 
         if (!currentMask.IsUnlockMask) {
             Debug.LogWarning(currentMask + " is not unlock");

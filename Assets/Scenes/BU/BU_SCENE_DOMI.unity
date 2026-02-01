@@ -3024,14 +3024,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LionMask
   filterColorImage: {fileID: 2091646166}
   maskName: Lion
-  isUnlock: 0
+  isUnlock: 1
   visionMaterial: {fileID: 2100000, guid: 0f72aa2ce5064e240971f0ddbc65db05, type: 2}
   maskTransition: {fileID: 860477140}
+  imageMask: {fileID: 1857786736}
+  imageDefaultMask: {fileID: 21300000, guid: ebedcc780778cca4597f248300d47230, type: 3}
   lionFilterColors: {r: 0.81, g: 0.85, b: 0.25, a: 1}
-  visionRadius: 0.4
-  edgeSoftness: 0.14
+  visionRadius: 0.7
+  edgeSoftness: 0.4
   blurAmount: 0
   centerAlpha: 0.1
+  spriteMasks: {fileID: 21300000, guid: 4ea3f03fbce3e144c9f86c7fc6d2b9b1, type: 3}
 --- !u!4 &1181012876
 Transform:
   m_ObjectHideFlags: 0
@@ -4213,14 +4216,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::OxMask
   filterColorImage: {fileID: 2091646166}
   maskName: Ox
-  isUnlock: 0
+  isUnlock: 1
   visionMaterial: {fileID: 2100000, guid: 0f72aa2ce5064e240971f0ddbc65db05, type: 2}
   maskTransition: {fileID: 860477140}
+  imageMask: {fileID: 1857786736}
+  imageDefaultMask: {fileID: 21300000, guid: ebedcc780778cca4597f248300d47230, type: 3}
   oxFilterColors: {r: 1, g: 0, b: 0, a: 1}
   visionRadius: 1
   edgeSoftness: 0.15
   blurAmount: 3
   centerAlpha: 0.7
+  spriteMasks: {fileID: 21300000, guid: 019073e4e6f4f254398344d9eddd7997, type: 3}
 --- !u!4 &1540388117
 Transform:
   m_ObjectHideFlags: 0
@@ -5753,11 +5759,6 @@ MonoBehaviour:
   - {fileID: 2145763327}
   - {fileID: 1181012875}
   - {fileID: 1540388116}
-  spriteMasks:
-  - {fileID: 21300000, guid: d81cd29776ae419478455fa002d33fd5, type: 3}
-  - {fileID: 21300000, guid: 4ea3f03fbce3e144c9f86c7fc6d2b9b1, type: 3}
-  - {fileID: 21300000, guid: 019073e4e6f4f254398344d9eddd7997, type: 3}
-  mask: {fileID: 1857786736}
 --- !u!4 &2115649852
 Transform:
   m_ObjectHideFlags: 0
@@ -5807,14 +5808,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DeerMask
   filterColorImage: {fileID: 2091646166}
   maskName: Deer
-  isUnlock: 0
+  isUnlock: 1
   visionMaterial: {fileID: 2100000, guid: 0f72aa2ce5064e240971f0ddbc65db05, type: 2}
   maskTransition: {fileID: 860477140}
+  imageMask: {fileID: 1857786736}
+  imageDefaultMask: {fileID: 21300000, guid: ebedcc780778cca4597f248300d47230, type: 3}
   deerFilterColors: {r: 1, g: 1, b: 1, a: 1}
-  visionRadius: 0.6
+  visionRadius: 0.7
   edgeSoftness: 0.4
   blurAmount: 2
   centerAlpha: 0.23
+  spriteMasks: {fileID: 21300000, guid: d81cd29776ae419478455fa002d33fd5, type: 3}
 --- !u!4 &2145763328
 Transform:
   m_ObjectHideFlags: 0
@@ -5882,6 +5886,10 @@ PrefabInstance:
       propertyPath: mask
       value: 
       objectReference: {fileID: 1540388115}
+    - target: {fileID: 1455576948704885545, guid: 035986960611a924bb7734a5b5c37b2f, type: 3}
+      propertyPath: getMask
+      value: 
+      objectReference: {fileID: 2145763326}
     - target: {fileID: 1455576948704885545, guid: 035986960611a924bb7734a5b5c37b2f, type: 3}
       propertyPath: interact
       value: 
