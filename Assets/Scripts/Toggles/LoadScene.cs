@@ -4,13 +4,13 @@ using UnityEngine.SceneManagement;
 
 public class LoadScene : MonoBehaviour
 {
-    public string SceneToLoad;
-    Scene SceneToUnload;
+    private const string SCENE_GAME = "Scenes/BU/BU_SCENE_DOMI";
 
-    bool additive = false;
+    public void LoadGameMenu() {
+        SceneManager.LoadScene(SCENE_GAME);
+    }
 
-    void OnEnable()
-    {
-        SceneManager.LoadSceneAsync(SceneToLoad, additive ? LoadSceneMode.Additive : LoadSceneMode.Single);
+    public void QuitGame() {
+        Application.Quit();
     }
 }
