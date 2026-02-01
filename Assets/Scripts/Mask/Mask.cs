@@ -5,11 +5,12 @@ using UnityEngine.Rendering.Universal;
 
 public abstract class Mask: MonoBehaviour {
 
-    [SerializeField] protected GameObject visualMask;
+    //[SerializeField] protected GameObject visualMask;
     [SerializeField] protected Image filterColorImage;
     [SerializeField] protected string maskName;
     [SerializeField] protected bool isUnlock = false;
     [SerializeField] protected Material visionMaterial;
+    [SerializeField] protected MaskTransition maskTransition;
 
     protected bool isEquipped = false;
     protected Color defaultFilterColors;
@@ -21,7 +22,7 @@ public abstract class Mask: MonoBehaviour {
             defaultFilterColors = new Color(0, 0, 0, 0);
         }
 
-        visualMask?.SetActive(false);
+        //visualMask?.SetActive(false);
     }
 
     public bool IsEquipped => isEquipped;
@@ -35,20 +36,35 @@ public abstract class Mask: MonoBehaviour {
 
         if (!isEquipped && isUnlock)
         {
+            if (maskTransition != null) {
+                maskTransition.TransitionToMask(() => {
+                    ApplyCameraEffect();
+                    Debug.Log("Masque équipé!");
+                });
+            } else {
+                // Pas de transition, application directe
+                ApplyCameraEffect();
+            }
+
             isEquipped = true;
-            visualMask?.SetActive(true);
-            ApplyCameraEffect();
-            Debug.Log("Equipped " + maskName);
+            //visualMask?.SetActive(true);
         }
 
     }
     public virtual void Unequip()
     {
-        if (isEquipped)
-        {
+        if (isEquipped) {
+            if (maskTransition != null) {
+                maskTransition.TransitionFromMask(() => {
+                    RemoveCameraEffect();
+                    Debug.Log("Masque retiré!");
+                });
+            } else {
+                RemoveCameraEffect();
+            }
+
             isEquipped = false;
-            visualMask?.SetActive(false);
-            RemoveCameraEffect();
+            //visualMask?.SetActive(false);
         }
 
         Debug.Log("Unequipped " + maskName);
