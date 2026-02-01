@@ -3,7 +3,7 @@ using UnityEngine.InputSystem;
 
 public class Interactable : MonoBehaviour
 {
-    private GameObject player;
+    public GameObject player;
     public GameObject interact;
     bool Enter;
     GameObject maskmanager;
@@ -50,7 +50,7 @@ public class Interactable : MonoBehaviour
 
     public void Interact()
     {
-        if (Enter == true)
+        if (Enter == true && player != null)
         {
             if (maskmanager == null) return;
             MaskManager maskManagerComponent = maskmanager?.GetComponent<MaskManager>();
@@ -88,6 +88,6 @@ public class Interactable : MonoBehaviour
 
     public void getMaskSound()
     {
-        getMask.gameObject.SetActive(true);
+        //getMask.gameObject.SetActive(true);
     }
 }
