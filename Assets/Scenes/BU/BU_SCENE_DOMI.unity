@@ -3049,11 +3049,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4416401312335287420, guid: 08492f0392916ed478f7792a91828b4a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.63
+      value: -2.643
       objectReference: {fileID: 0}
     - target: {fileID: 4416401312335287420, guid: 08492f0392916ed478f7792a91828b4a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.92
+      value: -2.916
       objectReference: {fileID: 0}
     - target: {fileID: 4416401312335287420, guid: 08492f0392916ed478f7792a91828b4a, type: 3}
       propertyPath: m_LocalPosition.z
@@ -5815,7 +5815,7 @@ PrefabInstance:
     - target: {fileID: 1455576948704885545, guid: 035986960611a924bb7734a5b5c37b2f, type: 3}
       propertyPath: interact
       value: 
-      objectReference: {fileID: 1037528717}
+      objectReference: {fileID: 0}
     - target: {fileID: 1742884573351698805, guid: 035986960611a924bb7734a5b5c37b2f, type: 3}
       propertyPath: m_Name
       value: Ox
@@ -5912,7 +5912,7 @@ PrefabInstance:
     - target: {fileID: 8619935770548290884, guid: e5c3f9db0b245064bb2363575661ceb5, type: 3}
       propertyPath: interact
       value: 
-      objectReference: {fileID: 1037528717}
+      objectReference: {fileID: 0}
     - target: {fileID: 8677626540340093268, guid: e5c3f9db0b245064bb2363575661ceb5, type: 3}
       propertyPath: NPC_Text
       value: 
