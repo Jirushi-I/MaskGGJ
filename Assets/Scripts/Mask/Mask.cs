@@ -11,6 +11,8 @@ public abstract class Mask: MonoBehaviour {
     [SerializeField] protected bool isUnlock = false;
     [SerializeField] protected Material visionMaterial;
     [SerializeField] protected MaskTransition maskTransition;
+    [SerializeField] protected Image imageMask;
+    [SerializeField] protected Sprite imageDefaultMask;
 
     protected bool isEquipped = false;
     protected Color defaultFilterColors;
@@ -21,7 +23,7 @@ public abstract class Mask: MonoBehaviour {
         {
             defaultFilterColors = new Color(0, 0, 0, 0);
         }
-
+        Debug.Log(imageMask);
         //visualMask?.SetActive(false);
     }
 
@@ -53,6 +55,8 @@ public abstract class Mask: MonoBehaviour {
     }
     public virtual void Unequip()
     {
+
+        Debug.Log("Here");
         if (isEquipped) {
             if (maskTransition != null) {
                 maskTransition.TransitionFromMask(() => {
@@ -73,6 +77,7 @@ public abstract class Mask: MonoBehaviour {
         if (isUnlock) {
             Debug.Log(maskName + "is already unlock");
         }
+
         isUnlock = true;
         Debug.Log(maskName + "is unlock");
     }

@@ -131,6 +131,7 @@ public class Template_UIManager : MonoBehaviour
     //Input related stuff (scroll through player choices and update highlight)
     void Update()
     {
+        if( VD.nodeData == null) return;
         //Lets just store the Node Data variable for the sake of fewer words
         var data = VD.nodeData;
 

@@ -9,12 +9,16 @@ public class DeerMask : Mask {
     [SerializeField][Range(0f, 20f)] private float blurAmount = 2f;
     [SerializeField][Range(0f, 1f)] private float centerAlpha = 0.23f;
 
+    [SerializeField] private Sprite spriteMasks;
+
 
     protected override void ApplyCameraEffect() {
         if (filterColorImage == null) {
             Debug.LogWarning("Image not found");
             return;
         }
+
+        imageMask.sprite = spriteMasks;
         filterColorImage.color = deerFilterColors;
         UpdateMaterial();
         Debug.Log(maskName + " is Applied");
@@ -24,6 +28,7 @@ public class DeerMask : Mask {
         if (filterColorImage == null)
             return;
 
+        imageMask.sprite = imageDefaultMask;
         filterColorImage.color = defaultFilterColors;
         Debug.Log(maskName + " is removed");
     }

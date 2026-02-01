@@ -9,12 +9,16 @@ public class OxMask : Mask
     [SerializeField][Range(0f, 20f)] private float blurAmount = 3f;
     [SerializeField][Range(0f, 1f)] private float centerAlpha = 0.7f;
 
+    [SerializeField] private Sprite spriteMasks;
+
 
     protected override void ApplyCameraEffect() {
         if (filterColorImage == null) {
             Debug.LogWarning("Image not found");
             return;
         }
+
+        imageMask.sprite = spriteMasks;
         filterColorImage.color = oxFilterColors;
         UpdateMaterial();
         Debug.Log(maskName + " is Applied");
@@ -24,6 +28,8 @@ public class OxMask : Mask
     protected override void RemoveCameraEffect() {
         if (filterColorImage == null)
             return;
+
+        imageMask.sprite = imageDefaultMask;
         filterColorImage.color = defaultFilterColors;
         Debug.Log(maskName + " is removed");
     }
