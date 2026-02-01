@@ -9,7 +9,7 @@ public class Interactable : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        Cursor.visible = false;
     }
 
     // Update is called once per frame
@@ -26,7 +26,6 @@ public class Interactable : MonoBehaviour
             interact.SetActive(true);
             player = other.gameObject;
             Enter = true;
-            
 
             if (Input.GetKeyDown(KeyCode.Space))
             {
@@ -41,6 +40,7 @@ public class Interactable : MonoBehaviour
     private void OnTriggerExit(Collider other)
     {
         interact.SetActive(false);
+
         Enter = false;
     }
 
@@ -52,12 +52,16 @@ public class Interactable : MonoBehaviour
             this.gameObject.GetComponent<Template_UIManager>().Interact(this.GetComponent<VIDE_Assign>());
             this.gameObject.GetComponent<Template_UIManager>().enabled = true;
             interact.SetActive(false);
+            
+            Cursor.visible = true;
         }
     }
 
     public void ResetPlayer()
     {
         player.GetComponent<CharacterController>().enabled = true;
+
+        Cursor.visible = false;
     }
 
 
