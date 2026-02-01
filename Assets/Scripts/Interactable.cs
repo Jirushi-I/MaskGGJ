@@ -8,6 +8,7 @@ public class Interactable : MonoBehaviour
     bool Enter;
     GameObject maskmanager;
     public GameObject mask;
+    public GameObject getMask;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -85,5 +86,8 @@ public class Interactable : MonoBehaviour
         Cursor.visible = false;
     }
 
-
+    public void getMaskSound()
+    {
+        getMask.gameObject.SetActive(true);
+    }
 }
