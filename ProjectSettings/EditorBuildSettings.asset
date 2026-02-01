@@ -12,8 +12,11 @@ EditorBuildSettings:
     path: Assets/Scenes/Game Start/MainMenu.unity
     guid: 64f42186a6bbbcf489c48dceec095e71
   - enabled: 1
-    path: Assets/Scenes/Dominic-TestingGround.unity
+    path: Assets/Scenes/Test/Dominic-TestingGround.unity
     guid: 76bc9eaa4c269374caa7eb4733d944fb
+  - enabled: 1
+    path: Assets/Scenes/BU/BU_SCENE_DOMI.unity
+    guid: 6c641d6e048919f46ad4299fe8d66355
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0

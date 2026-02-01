@@ -1,6 +1,8 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 using System.Collections;
+using UnityEngine.UI;
+
 
 public class MaskManager : MonoBehaviour {
     public static MaskManager Instance { get; private set; }
@@ -38,6 +40,7 @@ public class MaskManager : MonoBehaviour {
     }
 
     private void EquipMask(int index) {
+
         // Check if the index is within the valid range
          if (index < 0 || index >= availableMasks.Length)
         {
@@ -60,6 +63,8 @@ public class MaskManager : MonoBehaviour {
 
         currentMaskIndex = index;
         currentMask = availableMasks[index];
+
+        Debug.Log(currentMask + " is mask" );
 
         if (!currentMask.IsUnlockMask) {
             Debug.LogWarning(currentMask + " is not unlock");

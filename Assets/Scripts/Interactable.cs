@@ -3,19 +3,26 @@ using UnityEngine.InputSystem;
 
 public class Interactable : MonoBehaviour
 {
-    private GameObject player;
+    public GameObject player;
     public GameObject interact;
     bool Enter;
+    GameObject maskmanager;
+    public GameObject mask;
+    public GameObject getMask;
+    public GameObject[] others;
+    public WinCondition win;
+    public SignalManager signalManager;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        maskmanager = GameObject.Find("MaskManager");
         Cursor.visible = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     private void OnTriggerEnter(Collider other)
@@ -26,13 +33,17 @@ public class Interactable : MonoBehaviour
             interact.SetActive(true);
             player = other.gameObject;
             Enter = true;
+            others[0].SetActive(false);
+            others[1].SetActive(false);
+            win = GameObject.Find("winCondition").GetComponent<WinCondition>();
+
 
             if (Input.GetKeyDown(KeyCode.Space))
             {
-               /* other.GetComponent<CharacterController>().enabled = false;
-                this.gameObject.GetComponent<Template_UIManager>().Interact(this.GetComponent<VIDE_Assign>());
-                this.gameObject.GetComponent<Template_UIManager>().enabled = true;
-                interact.SetActive(false);*/
+                /* other.GetComponent<CharacterController>().enabled = false;
+                 this.gameObject.GetComponent<Template_UIManager>().Interact(this.GetComponent<VIDE_Assign>());
+                 this.gameObject.GetComponent<Template_UIManager>().enabled = true;
+                 interact.SetActive(false);*/
             }
         }
     }
@@ -42,17 +53,66 @@ public class Interactable : MonoBehaviour
         interact.SetActive(false);
 
         Enter = false;
+        others[0].SetActive(true);
+        others[1].SetActive(true);
     }
 
     public void Interact()
     {
-        if (Enter == true)
+        if (Enter == true && player != null)
         {
-            player.GetComponent<CharacterController>().enabled = false;
+            if (maskmanager == null) return;
+            MaskManager maskManagerComponent = maskmanager?.GetComponent<MaskManager>();
+
+            if (maskManagerComponent == null) return;
+            Mask currentMask = maskManagerComponent?.GetCurrentMask();
+            if (this.transform.parent.name == "Lion")
+            {
+                if (currentMask == null || currentMask.gameObject != mask.gameObject)
+                {
+                    this.gameObject.GetComponent<VIDE_Assign>().overrideStartNode = 4;
+                }
+                else if (currentMask.gameObject == mask.gameObject)
+                {
+                    this.gameObject.GetComponent<VIDE_Assign>().overrideStartNode = 5;
+                }
+            }
+            else if (this.transform.parent.name == "Ox")
+            {
+                if (currentMask == null || currentMask.gameObject != mask.gameObject)
+                {
+                    this.gameObject.GetComponent<VIDE_Assign>().overrideStartNode = 0;
+                }
+                else if (currentMask.gameObject == mask.gameObject)
+                {
+                    this.gameObject.GetComponent<VIDE_Assign>().overrideStartNode = 1;
+                }
+            }
+            else if (this.transform.parent.name == "Deer")
+            {
+                if (currentMask == null || currentMask.gameObject != mask.gameObject)
+                {
+                    this.gameObject.GetComponent<VIDE_Assign>().overrideStartNode = 33;
+                }
+                else if (currentMask.gameObject == mask.gameObject)
+                {
+                    this.gameObject.GetComponent<VIDE_Assign>().overrideStartNode = 0;
+                }
+            }
+
+            if (player != null)
+            {
+                CharacterController controller = player.GetComponent<CharacterController>();
+                if (controller != null)
+                {
+                    controller.enabled = false;
+                }
+            }
+
             this.gameObject.GetComponent<Template_UIManager>().Interact(this.GetComponent<VIDE_Assign>());
             this.gameObject.GetComponent<Template_UIManager>().enabled = true;
-            interact.SetActive(false);
-            
+            interact?.SetActive(false);
+
             Cursor.visible = true;
         }
     }
@@ -64,5 +124,8 @@ public class Interactable : MonoBehaviour
         Cursor.visible = false;
     }
 
-
+    public void getMaskSound()
+    {
+        //getMask.gameObject.SetActive(true);
+    }
 }
