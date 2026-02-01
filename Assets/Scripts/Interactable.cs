@@ -8,14 +8,12 @@ public class Interactable : MonoBehaviour
     bool Enter;
     GameObject maskmanager;
     public GameObject mask;
-    public GameObject getMask;
     public GameObject[] others;
     public WinCondition win;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         maskmanager = GameObject.Find("MaskManager");
-        Cursor.visible = false;
     }
 
     // Update is called once per frame
@@ -123,8 +121,4 @@ public class Interactable : MonoBehaviour
         Cursor.visible = false;
     }
 
-    public void getMaskSound()
-    {
-        //getMask.gameObject.SetActive(true);
-    }
 }
