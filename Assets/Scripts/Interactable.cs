@@ -1,0 +1,44 @@
+using UnityEngine;
+using UnityEngine.InputSystem;
+
+public class Interactable : MonoBehaviour
+{
+    private GameObject player;
+    public GameObject interact;
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    void Start()
+    {
+        
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.gameObject.tag == "Player")
+        {
+            //other.GetComponent<CharacterController>().enabled = false;
+            interact.SetActive(true);
+            player = other.gameObject;
+
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                other.GetComponent<CharacterController>().enabled = false;
+                this.gameObject.GetComponent<Template_UIManager>().Interact(this.GetComponent<VIDE_Assign>());
+                this.gameObject.GetComponent<Template_UIManager>().enabled = true;
+                interact.SetActive(false);
+            }
+        }
+    }
+
+    public void ResetPlayer()
+    {
+        player.GetComponent<CharacterController>().enabled = true;
+    }
+
+
+}
