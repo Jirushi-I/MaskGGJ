@@ -9,7 +9,7 @@ public class WinCondition : MonoBehaviour
     public void Progress()
     {
         counter++;
-        if (counter == 2)
+        if (counter == 3)
         {
             winscreen.SetActive(true);
         }

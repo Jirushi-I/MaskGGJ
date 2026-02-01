@@ -3492,9 +3492,13 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 257385336}
     - target: {fileID: 1687599416717711505, guid: 08492f0392916ed478f7792a91828b4a, type: 3}
+      propertyPath: win
+      value: 
+      objectReference: {fileID: 2136833214}
+    - target: {fileID: 1687599416717711505, guid: 08492f0392916ed478f7792a91828b4a, type: 3}
       propertyPath: mask
       value: 
-      objectReference: {fileID: 1540388115}
+      objectReference: {fileID: 1181012874}
     - target: {fileID: 1687599416717711505, guid: 08492f0392916ed478f7792a91828b4a, type: 3}
       propertyPath: interact
       value: 
@@ -4649,16 +4653,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::OxMask
   filterColorImage: {fileID: 2091646166}
   maskName: Ox
-  isUnlock: 0
+  isUnlock: 1
   visionMaterial: {fileID: 2100000, guid: 0f72aa2ce5064e240971f0ddbc65db05, type: 2}
   maskTransition: {fileID: 860477140}
   imageMask: {fileID: 1857786736}
   imageDefaultMask: {fileID: 21300000, guid: ebedcc780778cca4597f248300d47230, type: 3}
-  oxFilterColors: {r: 1, g: 0, b: 0, a: 1}
+  oxFilterColors: {r: 0.91823894, g: 0.303192, b: 0.303192, a: 1}
   visionRadius: 1
   edgeSoftness: 0.15
   blurAmount: 3
-  centerAlpha: 0.7
+  centerAlpha: 0.6
   spriteMasks: {fileID: 21300000, guid: 019073e4e6f4f254398344d9eddd7997, type: 3}
 --- !u!4 &1540388117
 Transform:
@@ -6649,6 +6653,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1455576948704885545, guid: 035986960611a924bb7734a5b5c37b2f, type: 3}
+      propertyPath: win
+      value: 
+      objectReference: {fileID: 2136833214}
+    - target: {fileID: 1455576948704885545, guid: 035986960611a924bb7734a5b5c37b2f, type: 3}
       propertyPath: mask
       value: 
       objectReference: {fileID: 1540388115}
@@ -6757,6 +6765,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Deer
       objectReference: {fileID: 0}
+    - target: {fileID: 8619935770548290884, guid: e5c3f9db0b245064bb2363575661ceb5, type: 3}
+      propertyPath: win
+      value: 
+      objectReference: {fileID: 2136833214}
     - target: {fileID: 8619935770548290884, guid: e5c3f9db0b245064bb2363575661ceb5, type: 3}
       propertyPath: mask
       value: 

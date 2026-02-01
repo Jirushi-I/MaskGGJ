@@ -11,7 +11,6 @@ public class Interactable : MonoBehaviour
     public GameObject getMask;
     public GameObject[] others;
     public WinCondition win;
-    public SignalManager signalManager;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
