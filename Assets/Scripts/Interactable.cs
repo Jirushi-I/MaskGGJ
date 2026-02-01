@@ -57,9 +57,9 @@ public class Interactable : MonoBehaviour
             if (maskManagerComponent == null) return;
             Mask currentMask = maskManagerComponent?.GetCurrentMask();
 
-            if (currentMask == null || currentMask != mask.gameObject) {
+            if (currentMask == null || currentMask.gameObject != mask.gameObject) {
                 this.gameObject.GetComponent<VIDE_Assign>().overrideStartNode = 4;
-            } else if (currentMask == mask.gameObject) {
+            } else if (currentMask.gameObject == mask.gameObject) {
                 this.gameObject.GetComponent<VIDE_Assign>().overrideStartNode = 5;
             }
 
