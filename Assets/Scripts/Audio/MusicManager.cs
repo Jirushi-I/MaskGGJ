@@ -26,7 +26,6 @@ public class MusicManager : MonoBehaviour
 
     public void SetMaskNone()
     {
-        FMODUnity.RuntimeManager.StudioSystem.setParameterByName("Mask", 0);
     }
 
     public void SetMaskLion()
