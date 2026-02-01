@@ -51,24 +51,30 @@ public class Interactable : MonoBehaviour
     {
         if (Enter == true)
         {
-            if (maskmanager.GetComponent<MaskManager>().GetCurrentMask().gameObject != mask.gameObject || maskmanager.GetComponent<MaskManager>().GetCurrentMask() == null)
-            {
+            if (maskmanager == null) return;
+            MaskManager maskManagerComponent = maskmanager?.GetComponent<MaskManager>();
+
+            if (maskManagerComponent == null) return;
+            Mask currentMask = maskManagerComponent?.GetCurrentMask();
+
+            if (currentMask == null || currentMask != mask.gameObject) {
                 this.gameObject.GetComponent<VIDE_Assign>().overrideStartNode = 4;
-            }
-            else if (maskmanager.GetComponent<MaskManager>().GetCurrentMask().gameObject == mask.gameObject)
-            {
+            } else if (currentMask == mask.gameObject) {
                 this.gameObject.GetComponent<VIDE_Assign>().overrideStartNode = 5;
             }
 
-            player.GetComponent<CharacterController>().enabled = false;
+            if (player != null) {
+                CharacterController controller = player.GetComponent<CharacterController>();
+                if (controller != null) {
+                    controller.enabled = false;
+                }
+            }
+
             this.gameObject.GetComponent<Template_UIManager>().Interact(this.GetComponent<VIDE_Assign>());
             this.gameObject.GetComponent<Template_UIManager>().enabled = true;
-            interact.SetActive(false);
-            
+            interact?.SetActive(false);
+
             Cursor.visible = true;
-
-            
-
         }
     }
 
