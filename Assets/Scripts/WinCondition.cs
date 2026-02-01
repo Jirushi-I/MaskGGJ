@@ -9,11 +9,14 @@ public class WinCondition : MonoBehaviour
     public void Progress()
     {
         counter++;
-        SignalManager.Instance.EmitOnUnlockTheMask();
+        if (counter < 3) {
+            SignalManager.Instance.EmitOnUnlockTheMask();
+        }
+        Debug.Log(counter + " is counter");
         if (counter == 3)
         {
-            winscreen.SetActive(true);
             Debug.Log("win");
+            winscreen.SetActive(true);
         }
     }
 
