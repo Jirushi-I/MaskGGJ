@@ -62,16 +62,44 @@ public class Interactable : MonoBehaviour
 
             if (maskManagerComponent == null) return;
             Mask currentMask = maskManagerComponent?.GetCurrentMask();
-
-            if (currentMask == null || currentMask.gameObject != mask.gameObject) {
-                this.gameObject.GetComponent<VIDE_Assign>().overrideStartNode = 4;
-            } else if (currentMask.gameObject == mask.gameObject) {
-                this.gameObject.GetComponent<VIDE_Assign>().overrideStartNode = 5;
+            if (this.gameObject.GetComponentInParent<GameObject>().name == "Lion")
+            {
+                if (currentMask == null || currentMask.gameObject != mask.gameObject)
+                {
+                    this.gameObject.GetComponent<VIDE_Assign>().overrideStartNode = 4;
+                }
+                else if (currentMask.gameObject == mask.gameObject)
+                {
+                    this.gameObject.GetComponent<VIDE_Assign>().overrideStartNode = 5;
+                }
+            } else if (this.gameObject.GetComponentInParent<GameObject>().name == "Ox")
+            {
+                if (currentMask == null || currentMask.gameObject != mask.gameObject)
+                {
+                    this.gameObject.GetComponent<VIDE_Assign>().overrideStartNode = 0;
+                }
+                else if (currentMask.gameObject == mask.gameObject)
+                {
+                    this.gameObject.GetComponent<VIDE_Assign>().overrideStartNode = 1;
+                }
+            }
+            else if (this.gameObject.GetComponentInParent<GameObject>().name == "Deer")
+            {
+                if (currentMask == null || currentMask.gameObject != mask.gameObject)
+                {
+                    this.gameObject.GetComponent<VIDE_Assign>().overrideStartNode = 33;
+                }
+                else if (currentMask.gameObject == mask.gameObject)
+                {
+                    this.gameObject.GetComponent<VIDE_Assign>().overrideStartNode = 0;
+                }
             }
 
-            if (player != null) {
+            if (player != null)
+            {
                 CharacterController controller = player.GetComponent<CharacterController>();
-                if (controller != null) {
+                if (controller != null)
+                {
                     controller.enabled = false;
                 }
             }
