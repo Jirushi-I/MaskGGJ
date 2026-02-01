@@ -124,15 +124,15 @@ MonoBehaviour:
     - text: Alright so... who invited you to the party? You are a fun one!
       extraData: ExtraData
       inputSetIndex: 1
-      outputNodeIndex: -1
+      outputNodeIndex: 27
       outActionIndex: -1
       showmore: 0
       outRect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 0
-        height: 0
+        x: 300
+        y: 144
+        width: 30
+        height: 32
       sprites: {fileID: 0}
       audios: {fileID: 0}
       visible: 1
@@ -565,7 +565,7 @@ MonoBehaviour:
       x: 4240
       y: -350
       width: 348
-      height: 74
+      height: 138.05
     pTag: 
     expand: 0
     sprite: {fileID: 0}
@@ -965,14 +965,43 @@ MonoBehaviour:
     vars: []
     varKeys: []
     isPlayer: 0
-  - commentCount: 1
+  - commentCount: 3
     s_comment:
     - text: "\nOkay - I will tell you - I believe that the Lions planted the bomb!
         Just look at them! They are arrogant, vile, despicable creatures who insult
-        others. If it wasn\u2019t for the inclusive and happy go lucky Stags that
-        invited them then I don\u2019t think we would even be in this mess! Here
-        - take this (lion or stag mask) and talk to them! Find out the truth for
-        yourself! The \n"
+        others. \n"
+      extraData: ExtraData
+      inputSetIndex: 25
+      outputNodeIndex: -1
+      outActionIndex: 5
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 301
+        y: 63
+        width: 30
+        height: 105
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    - text: "If it wasn\u2019t for the inclusive and happy go lucky Stags that invited
+        them then I don\u2019t think we would even be in this mess! Here - take this
+        (lion or stag mask) and talk to them! Find out the truth for yourself! "
+      extraData: ExtraData
+      inputSetIndex: 25
+      outputNodeIndex: -1
+      outActionIndex: -1
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    - text: (Receive Mask)
       extraData: ExtraData
       inputSetIndex: 25
       outputNodeIndex: -1
@@ -993,7 +1022,493 @@ MonoBehaviour:
       x: 4740
       y: 140
       width: 348
-      height: 312.32
+      height: 340.32
+    pTag: 
+    expand: 0
+    sprite: {fileID: 0}
+    vars: []
+    varKeys: []
+    isPlayer: 0
+  - commentCount: 1
+    s_comment:
+    - text: Hey buddy I will only talk to a fellow Stag. Why don't you get on your
+        mask and come on back.
+      extraData: ExtraData
+      inputSetIndex: 26
+      outputNodeIndex: -1
+      outActionIndex: 7
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 301
+        y: 63
+        width: 30
+        height: 47
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    ID: 33
+    rect:
+      serializedVersion: 2
+      x: 30
+      y: 580
+      width: 348
+      height: 74
+    pTag: 
+    expand: 0
+    sprite: {fileID: 0}
+    vars: []
+    varKeys: []
+    isPlayer: 0
+  - commentCount: 1
+    s_comment:
+    - text: 'Why thank you! We were invited by the Ox! And then we invited the Lions!
+        We just wanted everyone to come!.
+
+'
+      extraData: ExtraData
+      inputSetIndex: 27
+      outputNodeIndex: 28
+      outActionIndex: -1
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 301
+        y: 63
+        width: 30
+        height: 76
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    ID: 35
+    rect:
+      serializedVersion: 2
+      x: 860
+      y: 560
+      width: 348
+      height: 74
+    pTag: 
+    expand: 0
+    sprite: {fileID: 0}
+    vars: []
+    varKeys: []
+    isPlayer: 0
+  - commentCount: 2
+    s_comment:
+    - text: Why did you invite the Lions? They do not seem that friendly.
+      extraData: ExtraData
+      inputSetIndex: 28
+      outputNodeIndex: 29
+      outActionIndex: -1
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 301
+        y: 63
+        width: 30
+        height: 32
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    - text: Why did you get invited to the party?
+      extraData: ExtraData
+      inputSetIndex: 28
+      outputNodeIndex: 35
+      outActionIndex: -1
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 300
+        y: 96
+        width: 30
+        height: 32
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    ID: 36
+    rect:
+      serializedVersion: 2
+      x: 1330
+      y: 520
+      width: 348
+      height: 74
+    pTag: 
+    expand: 0
+    sprite: {fileID: 0}
+    vars: []
+    varKeys: []
+    isPlayer: 1
+  - commentCount: 1
+    s_comment:
+    - text: Oh we just wanted everyone included.
+      extraData: ExtraData
+      inputSetIndex: 29
+      outputNodeIndex: 30
+      outActionIndex: -1
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 301
+        y: 63
+        width: 30
+        height: 32
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    ID: 37
+    rect:
+      serializedVersion: 2
+      x: 1720
+      y: 440
+      width: 348
+      height: 74
+    pTag: 
+    expand: 0
+    sprite: {fileID: 0}
+    vars: []
+    varKeys: []
+    isPlayer: 0
+  - commentCount: 3
+    s_comment:
+    - text: Okay cool. So you want everyone to be included. That's awfully nice of
+        you.
+      extraData: ExtraData
+      inputSetIndex: 30
+      outputNodeIndex: 31
+      outActionIndex: -1
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 301
+        y: 63
+        width: 30
+        height: 47
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    - text: 'Lions don''t belong here. They always end up staring fights. '
+      extraData: ExtraData
+      inputSetIndex: 30
+      outputNodeIndex: 33
+      outActionIndex: -1
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 300
+        y: 111
+        width: 30
+        height: 32
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    - text: "You don\u2019t feel a bit strange going out of your way to invite a
+        group of people the hosts (the Ox) didn\u2019t want to invite?\n"
+      extraData: ExtraData
+      inputSetIndex: 30
+      outputNodeIndex: 34
+      outActionIndex: -1
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 300
+        y: 144
+        width: 30
+        height: 76
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    ID: 38
+    rect:
+      serializedVersion: 2
+      x: 2130
+      y: 500
+      width: 348
+      height: 74
+    pTag: 
+    expand: 0
+    sprite: {fileID: 0}
+    vars: []
+    varKeys: []
+    isPlayer: 1
+  - commentCount: 1
+    s_comment:
+    - text: Why thank you! Yes. We wished everyone to be at this party. To enjoy
+        it!
+      extraData: ExtraData
+      inputSetIndex: 31
+      outputNodeIndex: 32
+      outActionIndex: -1
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 301
+        y: 63
+        width: 30
+        height: 47
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    ID: 39
+    rect:
+      serializedVersion: 2
+      x: 2510
+      y: 510
+      width: 348
+      height: 74
+    pTag: 
+    expand: 0
+    sprite: {fileID: 0}
+    vars: []
+    varKeys: []
+    isPlayer: 0
+  - commentCount: 2
+    s_comment:
+    - text: 'Is that because you wanted to blow everyone up?
+
+'
+      extraData: ExtraData
+      inputSetIndex: 32
+      outputNodeIndex: 7
+      outActionIndex: -1
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 301
+        y: 63
+        width: 30
+        height: 47
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    - text: 'Howcome?
+
+
+'
+      extraData: ExtraData
+      inputSetIndex: 32
+      outputNodeIndex: 25
+      outActionIndex: -1
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 300
+        y: 111
+        width: 30
+        height: 47
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    ID: 40
+    rect:
+      serializedVersion: 2
+      x: 4210
+      y: 220
+      width: 348
+      height: 200.14
+    pTag: 
+    expand: 0
+    sprite: {fileID: 0}
+    vars: []
+    varKeys: []
+    isPlayer: 1
+  - commentCount: 1
+    s_comment:
+    - text: 'Everyone always deserves to enjoy a good party!
+
+'
+      extraData: ExtraData
+      inputSetIndex: 33
+      outputNodeIndex: -1
+      outActionIndex: 0
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 301
+        y: 63
+        width: 30
+        height: 47
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    ID: 41
+    rect:
+      serializedVersion: 2
+      x: 1380
+      y: 190
+      width: 348
+      height: 74
+    pTag: 
+    expand: 0
+    sprite: {fileID: 0}
+    vars: []
+    varKeys: []
+    isPlayer: 0
+  - commentCount: 1
+    s_comment:
+    - text: "No. Of course not! But you\u2019re being a big downer right now."
+      extraData: ExtraData
+      inputSetIndex: 34
+      outputNodeIndex: -1
+      outActionIndex: 0
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 301
+        y: 63
+        width: 30
+        height: 32
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    ID: 42
+    rect:
+      serializedVersion: 2
+      x: 1760
+      y: 250
+      width: 348
+      height: 74
+    pTag: 
+    expand: 0
+    sprite: {fileID: 0}
+    vars: []
+    varKeys: []
+    isPlayer: 0
+  - commentCount: 1
+    s_comment:
+    - text: 'Because us and the Ox go way back!
+
+'
+      extraData: ExtraData
+      inputSetIndex: 35
+      outputNodeIndex: 36
+      outActionIndex: -1
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 301
+        y: 63
+        width: 30
+        height: 47
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    ID: 43
+    rect:
+      serializedVersion: 2
+      x: 1630
+      y: 750
+      width: 348
+      height: 74
+    pTag: 
+    expand: 0
+    sprite: {fileID: 0}
+    vars: []
+    varKeys: []
+    isPlayer: 0
+  - commentCount: 2
+    s_comment:
+    - text: 'Oh so you guys are old friends?
+
+'
+      extraData: ExtraData
+      inputSetIndex: 36
+      outputNodeIndex: 37
+      outActionIndex: -1
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 301
+        y: 63
+        width: 30
+        height: 32
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    - text: 'Did they owe you something?
+
+'
+      extraData: ExtraData
+      inputSetIndex: 36
+      outputNodeIndex: 38
+      outActionIndex: -1
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 300
+        y: 96
+        width: 30
+        height: 32
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    ID: 44
+    rect:
+      serializedVersion: 2
+      x: 2050
+      y: 790
+      width: 348
+      height: 74
+    pTag: 
+    expand: 0
+    sprite: {fileID: 0}
+    vars: []
+    varKeys: []
+    isPlayer: 1
+  - commentCount: 1
+    s_comment:
+    - text: Yes. Exactly. We go way back. Let me tell you something important...
+      extraData: ExtraData
+      inputSetIndex: 37
+      outputNodeIndex: 25
+      outActionIndex: -1
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 301
+        y: 63
+        width: 30
+        height: 47
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    ID: 45
+    rect:
+      serializedVersion: 2
+      x: 4220
+      y: 70
+      width: 348
+      height: 152.57
+    pTag: 
+    expand: 0
+    sprite: {fileID: 0}
+    vars: []
+    varKeys: []
+    isPlayer: 0
+  - commentCount: 1
+    s_comment:
+    - text: No. We are always welcome. No bargaining involved. I am almost offended
+        at the suggestion
+      extraData: ExtraData
+      inputSetIndex: 38
+      outputNodeIndex: -1
+      outActionIndex: 0
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 301
+        y: 63
+        width: 30
+        height: 47
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    ID: 46
+    rect:
+      serializedVersion: 2
+      x: 1220
+      y: 720
+      width: 348
+      height: 74
     pTag: 
     expand: 0
     sprite: {fileID: 0}
@@ -1165,8 +1680,8 @@ MonoBehaviour:
       serializedVersion: 2
       x: 4240
       y: 720
-      width: 200
-      height: 170
+      width: 224
+      height: 74
     ID: 27
     outPlayerIndex: -1
     outActionIndex: -1
@@ -1212,6 +1727,131 @@ MonoBehaviour:
       width: 200
       height: 170
     ID: 29
+    outPlayerIndex: -1
+    outActionIndex: -1
+    more: 0
+    ovrStartNode: -1
+    renameDialogue: 
+  - pauseHere: 0
+    gameObjectName: winCondition
+    methodName: Progress
+    nameIndex: 1
+    methodIndex: 1
+    paramIndex: 0
+    opts:
+    - '[No method]'
+    - Progress
+    nameOpts:
+    - '[No object]'
+    - winCondition
+    - Interactable_Test
+    - Interactable_Test
+    - Interactable_Test
+    - UIMANAGER
+    - CinemachineBrain
+    - SignalManager
+    - MaskManager
+    param_bool: 0
+    param_string: 
+    param_int: 0
+    param_float: 0
+    rect:
+      serializedVersion: 2
+      x: 5120
+      y: 170
+      width: 200
+      height: 170
+    ID: 31
+    outPlayerIndex: -1
+    outActionIndex: 6
+    more: 0
+    ovrStartNode: -1
+    renameDialogue: 
+  - pauseHere: 0
+    gameObjectName: Interactable_Test
+    methodName: Interact
+    nameIndex: 2
+    methodIndex: 1
+    paramIndex: 0
+    opts:
+    - '[No method]'
+    - Interact
+    - ResetPlayer
+    - getMaskSound
+    - CallNext
+    - SelectChoice
+    - GetAssigned
+    - AssignNew
+    - SaveState
+    - LoadState
+    - OnBeforeSerialize
+    - OnAfterDeserialize
+    nameOpts:
+    - '[No object]'
+    - winCondition
+    - Interactable_Test
+    - Interactable_Test
+    - Interactable_Test
+    - UIMANAGER
+    - CinemachineBrain
+    - SignalManager
+    - MaskManager
+    param_bool: 0
+    param_string: 
+    param_int: 0
+    param_float: 0
+    rect:
+      serializedVersion: 2
+      x: 5320
+      y: 170
+      width: 200
+      height: 170
+    ID: 32
+    outPlayerIndex: -1
+    outActionIndex: -1
+    more: 0
+    ovrStartNode: -1
+    renameDialogue: 
+  - pauseHere: 0
+    gameObjectName: Interactable_Test
+    methodName: ResetPlayer
+    nameIndex: 1
+    methodIndex: 2
+    paramIndex: 0
+    opts:
+    - '[No method]'
+    - Interact
+    - ResetPlayer
+    - getMaskSound
+    - CallNext
+    - SelectChoice
+    - GetAssigned
+    - AssignNew
+    - SaveState
+    - LoadState
+    - OnBeforeSerialize
+    - OnAfterDeserialize
+    nameOpts:
+    - '[No object]'
+    - Interactable_Test
+    - Interactable_Test
+    - Interactable_Test
+    - UIMANAGER
+    - CinemachineBrain
+    - SignalManager
+    - MaskManager
+    - winCondition
+    param_bool: 0
+    param_string: 
+    param_int: 0
+    param_float: 0
+    rect:
+      serializedVersion: 2
+      x: 490
+      y: 570
+      width: 224
+      height: 74
+    ID: 34
     outPlayerIndex: -1
     outActionIndex: -1
     more: 0
