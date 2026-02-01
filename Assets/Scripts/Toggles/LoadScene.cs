@@ -4,10 +4,16 @@ using UnityEngine.SceneManagement;
 
 public class LoadScene : MonoBehaviour
 {
-    private const string SCENE_GAME = "Scenes/BU/BU_SCENE_DOMI";
+    private string SCENE_GAME = "Scenes/BU/BU_SCENE_DOMI";
+
+    private string SCENE_MAIN_MENU = "Scenes/Game Start/MainMenu";
 
     public void LoadGameMenu() {
         SceneManager.LoadScene(SCENE_GAME);
+    }
+
+    public void LoadMainMenu() {
+        SceneManager.LoadScene(SCENE_MAIN_MENU);
     }
 
     public void QuitGame() {
