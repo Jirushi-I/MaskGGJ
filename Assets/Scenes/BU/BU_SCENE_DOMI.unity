@@ -1908,6 +1908,42 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1281753031}
+        m_TargetAssemblyTypeName: LocalMusicManager, Assembly-CSharp
+        m_MethodName: PlayButtonSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1281753031}
+        m_TargetAssemblyTypeName: LocalMusicManager, Assembly-CSharp
+        m_MethodName: SetMaskStag
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1281753032}
+        m_TargetAssemblyTypeName: Starteractable, Assembly-CSharp
+        m_MethodName: ResetPlayer
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &688398089
 GameObject:
   m_ObjectHideFlags: 0
@@ -3289,6 +3325,42 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1281753031}
+        m_TargetAssemblyTypeName: LocalMusicManager, Assembly-CSharp
+        m_MethodName: PlayButtonSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1281753031}
+        m_TargetAssemblyTypeName: LocalMusicManager, Assembly-CSharp
+        m_MethodName: SetMaskOx
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1281753032}
+        m_TargetAssemblyTypeName: Starteractable, Assembly-CSharp
+        m_MethodName: ResetPlayer
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1148141562
 GameObject:
   m_ObjectHideFlags: 0
@@ -3943,6 +4015,89 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: NPC Comment
+--- !u!1001 &1281753030
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 8422144716851903944, guid: 6ff058eab618eec47a708fb899e42ebd, type: 3}
+      propertyPath: m_Name
+      value: LocalMusicManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 8708821598403320949, guid: 6ff058eab618eec47a708fb899e42ebd, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.5569
+      objectReference: {fileID: 0}
+    - target: {fileID: 8708821598403320949, guid: 6ff058eab618eec47a708fb899e42ebd, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -3.71
+      objectReference: {fileID: 0}
+    - target: {fileID: 8708821598403320949, guid: 6ff058eab618eec47a708fb899e42ebd, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -4.4635
+      objectReference: {fileID: 0}
+    - target: {fileID: 8708821598403320949, guid: 6ff058eab618eec47a708fb899e42ebd, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8708821598403320949, guid: 6ff058eab618eec47a708fb899e42ebd, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8708821598403320949, guid: 6ff058eab618eec47a708fb899e42ebd, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8708821598403320949, guid: 6ff058eab618eec47a708fb899e42ebd, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8708821598403320949, guid: 6ff058eab618eec47a708fb899e42ebd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8708821598403320949, guid: 6ff058eab618eec47a708fb899e42ebd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8708821598403320949, guid: 6ff058eab618eec47a708fb899e42ebd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8854274110494164432, guid: 6ff058eab618eec47a708fb899e42ebd, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 382342357}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6ff058eab618eec47a708fb899e42ebd, type: 3}
+--- !u!114 &1281753031 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3927053008693558580, guid: 6ff058eab618eec47a708fb899e42ebd, type: 3}
+  m_PrefabInstance: {fileID: 1281753030}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f082b861af5bea840abc10ef5f3f99bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalMusicManager
+--- !u!114 &1281753032 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8854274110494164432, guid: 6ff058eab618eec47a708fb899e42ebd, type: 3}
+  m_PrefabInstance: {fileID: 1281753030}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4544f4d99e490c841b8276adb8668b04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Starteractable
 --- !u!1 &1284848746
 GameObject:
   m_ObjectHideFlags: 0
@@ -4815,6 +4970,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1281753031}
+        m_TargetAssemblyTypeName: LocalMusicManager, Assembly-CSharp
+        m_MethodName: PlayButtonSound
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -6502,6 +6669,42 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1281753031}
+        m_TargetAssemblyTypeName: LocalMusicManager, Assembly-CSharp
+        m_MethodName: PlayButtonSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1281753031}
+        m_TargetAssemblyTypeName: LocalMusicManager, Assembly-CSharp
+        m_MethodName: SetMaskLion
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1281753032}
+        m_TargetAssemblyTypeName: Starteractable, Assembly-CSharp
+        m_MethodName: ResetPlayer
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &2136833213
 GameObject:
   m_ObjectHideFlags: 0
@@ -6903,4 +7106,5 @@ SceneRoots:
   - {fileID: 5173904995696453123}
   - {fileID: 716823983}
   - {fileID: 2136833215}
+  - {fileID: 1281753030}
   - {fileID: 203160959}
