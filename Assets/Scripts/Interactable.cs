@@ -65,6 +65,7 @@ public class Interactable : MonoBehaviour
             Mask currentMask = maskManagerComponent?.GetCurrentMask();
             if (this.transform.parent.name == "Lion")
             {
+                MusicManager.Instance.SetCharacterLion();
                 if (currentMask == null || currentMask.gameObject != mask.gameObject)
                 {
                     this.gameObject.GetComponent<VIDE_Assign>().overrideStartNode = 4;
@@ -73,9 +74,11 @@ public class Interactable : MonoBehaviour
                 {
                     this.gameObject.GetComponent<VIDE_Assign>().overrideStartNode = 5;
                 }
+                
             }
             else if (this.transform.parent.name == "Ox")
             {
+                MusicManager.Instance.SetCharacterOx();
                 if (currentMask == null || currentMask.gameObject != mask.gameObject)
                 {
                     this.gameObject.GetComponent<VIDE_Assign>().overrideStartNode = 0;
@@ -87,6 +90,7 @@ public class Interactable : MonoBehaviour
             }
             else if (this.transform.parent.name == "Deer")
             {
+                MusicManager.Instance.SetCharacterStag();
                 if (currentMask == null || currentMask.gameObject != mask.gameObject)
                 {
                     this.gameObject.GetComponent<VIDE_Assign>().overrideStartNode = 33;
@@ -97,6 +101,9 @@ public class Interactable : MonoBehaviour
                 }
             }
 
+            FMODUnity.RuntimeManager.PlayOneShot("event:/Interact");
+            FMODUnity.RuntimeManager.StudioSystem.setParameterByName("SucceedDialogue", 0);
+
             if (player != null)
             {
                 CharacterController controller = player.GetComponent<CharacterController>();
@@ -105,7 +112,7 @@ public class Interactable : MonoBehaviour
                     controller.enabled = false;
                 }
             }
-
+            
             this.gameObject.GetComponent<Template_UIManager>().Interact(this.GetComponent<VIDE_Assign>());
             this.gameObject.GetComponent<Template_UIManager>().enabled = true;
             interact?.SetActive(false);
@@ -117,6 +124,8 @@ public class Interactable : MonoBehaviour
     public void ResetPlayer()
     {
         player.GetComponent<CharacterController>().enabled = true;
+        FMODUnity.RuntimeManager.PlayOneShot("event:/Fail");
+
 
         Cursor.visible = false;
     }

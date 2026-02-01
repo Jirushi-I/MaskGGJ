@@ -41,7 +41,7 @@ public abstract class Mask: MonoBehaviour {
             if (maskTransition != null) {
                 maskTransition.TransitionToMask(() => {
                     ApplyCameraEffect();
-                    Debug.Log("Masque équipé!");
+                    Debug.Log("Masque ï¿½quipï¿½!");
                 });
             } else {
                 // Pas de transition, application directe
@@ -61,12 +61,12 @@ public abstract class Mask: MonoBehaviour {
             if (maskTransition != null) {
                 maskTransition.TransitionFromMask(() => {
                     RemoveCameraEffect();
-                    Debug.Log("Masque retiré!");
+                    Debug.Log("Masque retirï¿½!");
                 });
             } else {
                 RemoveCameraEffect();
             }
-
+            MusicManager.Instance.SetMaskNone();
             isEquipped = false;
             //visualMask?.SetActive(false);
         }

@@ -87,11 +87,11 @@ public class MaskManager : MonoBehaviour {
 
 
         if (lockedMasks.Length == 0) {
-            Debug.Log("Tous les masques sont déjà débloqués !");
+            Debug.Log("Tous les masques sont dï¿½jï¿½ dï¿½bloquï¿½s !");
             return null;
         }
 
-        // Choisis un masque aléatoire parmi les masques verrouillés
+        // Choisis un masque alï¿½atoire parmi les masques verrouillï¿½s
         int randomIndex = Random.Range(0, lockedMasks.Length);
         return lockedMasks[randomIndex];
     }
@@ -103,10 +103,11 @@ public class MaskManager : MonoBehaviour {
 
             System.Array.Resize(ref unlockedListMask, unlockedListMask.Length + 1);
             unlockedListMask[unlockedListMask.Length - 1] = newMask;
-
-            Debug.Log("Nouveau masque débloqué : " + newMask.name);
+            FMODUnity.RuntimeManager.PlayOneShot("event:/Succeed");
+            FMODUnity.RuntimeManager.StudioSystem.setParameterByName("SucceedDialogue", 1);
+            Debug.Log("Nouveau masque dï¿½bloquï¿½ : " + newMask.name);
         } else {
-            Debug.Log("Aucun nouveau masque à débloquer");
+            Debug.Log("Aucun nouveau masque ï¿½ dï¿½bloquer");
             return;
         }
         newMask.Unlock();

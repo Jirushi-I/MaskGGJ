@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{be314cd7-d7c2-4b73-8246-7e33d1f00a9f}">
+		<property name="name">
+			<value>SucceedDialogue</value>
+		</property>
+		<relationship name="folder">
+			<destination>{2bd3e944-bc92-4e63-a7de-6e1be3eaae6e}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{eb659ede-e3e1-4990-8415-9c1a05c7c69c}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{eb659ede-e3e1-4990-8415-9c1a05c7c69c}">
+		<property name="isGlobal">
+			<value>true</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+		<property name="isExposedRecursively">
+			<value>false</value>
+		</property>
+	</object>
+</objects>
