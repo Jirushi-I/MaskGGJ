@@ -116,7 +116,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 21300000, guid: e43993f412a06674dbd40cf1174ab504, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0fd814b3f6be4ef44819bc4099d1b979, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -278,8 +278,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3a9587df869db442b33ff5b2f0bfb92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Interactable
+  player: {fileID: 0}
   interact: {fileID: 0}
   mask: {fileID: 0}
+  getMask: {fileID: 0}
+  others:
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!114 &8966159731783443142
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -335,19 +340,21 @@ MonoBehaviour:
   - Example4_dialogue
   - Item_LookUp
   - Laura
+  - MonsieurStag
   - MrCube
   - NPCOnly
+  - ox
   - QuestChartDemo
   - Test
   - TriggeredDude
   - Witch
   assignedIndex: 12
-  assignedID: 66217
-  assignedDialogue: Test
+  assignedID: 80710
+  assignedDialogue: ox
   interactionCount: 0
   alias: Mister Ox
   overrideStartNode: -1
-  defaultNPCSprite: {fileID: 21300000, guid: 386589efb5fbf274590df95f4eca2846, type: 3}
+  defaultNPCSprite: {fileID: 21300000, guid: 3a2a18b618d16924ba78f3109ec2aa8a, type: 3}
   defaultPlayerSprite: {fileID: 21300000, guid: ca1397691a4e7d54e88268b636508a09, type: 3}
   targetManager: {fileID: 0}
   preload: 0

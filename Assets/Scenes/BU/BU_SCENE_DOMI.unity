@@ -5940,10 +5940,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1468685175}
     - target: {fileID: 1455576948704885545, guid: 035986960611a924bb7734a5b5c37b2f, type: 3}
-      propertyPath: others.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1455576948704885545, guid: 035986960611a924bb7734a5b5c37b2f, type: 3}
       propertyPath: 'others.Array.data[0]'
       value: 
       objectReference: {fileID: 771429333}
@@ -5955,30 +5951,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ox
       objectReference: {fileID: 0}
-    - target: {fileID: 4383714454586950742, guid: 035986960611a924bb7734a5b5c37b2f, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 0fd814b3f6be4ef44819bc4099d1b979, type: 3}
-    - target: {fileID: 4383714454586950742, guid: 035986960611a924bb7734a5b5c37b2f, type: 3}
-      propertyPath: m_WasSpriteAssigned
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8727963842735803558, guid: 035986960611a924bb7734a5b5c37b2f, type: 3}
-      propertyPath: assignedID
-      value: 80710
-      objectReference: {fileID: 0}
-    - target: {fileID: 8727963842735803558, guid: 035986960611a924bb7734a5b5c37b2f, type: 3}
-      propertyPath: assignedIndex
-      value: 14
-      objectReference: {fileID: 0}
     - target: {fileID: 8727963842735803558, guid: 035986960611a924bb7734a5b5c37b2f, type: 3}
       propertyPath: targetManager
       value: 
       objectReference: {fileID: 257385336}
-    - target: {fileID: 8727963842735803558, guid: 035986960611a924bb7734a5b5c37b2f, type: 3}
-      propertyPath: assignedDialogue
-      value: ox
-      objectReference: {fileID: 0}
     - target: {fileID: 8930576268333787347, guid: 035986960611a924bb7734a5b5c37b2f, type: 3}
       propertyPath: cameraPlayer
       value: 
@@ -6053,29 +6029,9 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 272788112}
     - target: {fileID: 3522016203805317294, guid: e5c3f9db0b245064bb2363575661ceb5, type: 3}
-      propertyPath: assignedID
-      value: 45481
-      objectReference: {fileID: 0}
-    - target: {fileID: 3522016203805317294, guid: e5c3f9db0b245064bb2363575661ceb5, type: 3}
-      propertyPath: assignedIndex
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 3522016203805317294, guid: e5c3f9db0b245064bb2363575661ceb5, type: 3}
       propertyPath: targetManager
       value: 
       objectReference: {fileID: 257385336}
-    - target: {fileID: 3522016203805317294, guid: e5c3f9db0b245064bb2363575661ceb5, type: 3}
-      propertyPath: assignedDialogue
-      value: MonsieurStag
-      objectReference: {fileID: 0}
-    - target: {fileID: 6178146881834582850, guid: e5c3f9db0b245064bb2363575661ceb5, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 82e397a621233e14190a51ddc3e97178, type: 3}
-    - target: {fileID: 6178146881834582850, guid: e5c3f9db0b245064bb2363575661ceb5, type: 3}
-      propertyPath: m_WasSpriteAssigned
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 6675628308336996893, guid: e5c3f9db0b245064bb2363575661ceb5, type: 3}
       propertyPath: m_Name
       value: Deer
@@ -6088,10 +6044,6 @@ PrefabInstance:
       propertyPath: interact
       value: 
       objectReference: {fileID: 1468685175}
-    - target: {fileID: 8619935770548290884, guid: e5c3f9db0b245064bb2363575661ceb5, type: 3}
-      propertyPath: others.Array.size
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 8619935770548290884, guid: e5c3f9db0b245064bb2363575661ceb5, type: 3}
       propertyPath: 'others.Array.data[0]'
       value: 
