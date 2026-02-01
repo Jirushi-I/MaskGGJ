@@ -3024,7 +3024,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LionMask
   filterColorImage: {fileID: 2091646166}
   maskName: Lion
-  isUnlock: 1
+  isUnlock: 0
   visionMaterial: {fileID: 2100000, guid: 0f72aa2ce5064e240971f0ddbc65db05, type: 2}
   maskTransition: {fileID: 860477140}
   imageMask: {fileID: 1857786736}
@@ -4216,7 +4216,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::OxMask
   filterColorImage: {fileID: 2091646166}
   maskName: Ox
-  isUnlock: 1
+  isUnlock: 0
   visionMaterial: {fileID: 2100000, guid: 0f72aa2ce5064e240971f0ddbc65db05, type: 2}
   maskTransition: {fileID: 860477140}
   imageMask: {fileID: 1857786736}
@@ -5808,7 +5808,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DeerMask
   filterColorImage: {fileID: 2091646166}
   maskName: Deer
-  isUnlock: 1
+  isUnlock: 0
   visionMaterial: {fileID: 2100000, guid: 0f72aa2ce5064e240971f0ddbc65db05, type: 2}
   maskTransition: {fileID: 860477140}
   imageMask: {fileID: 1857786736}
