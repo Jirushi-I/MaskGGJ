@@ -17,7 +17,9 @@ public class Body : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        controller.SimpleMove(head.TransformDirection(movement));
+        if (controller != null && controller.enabled) {
+            controller.SimpleMove(head.TransformDirection(movement));
+        }
     }
 
     public void Move(InputAction.CallbackContext context) 
