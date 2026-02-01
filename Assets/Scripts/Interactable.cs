@@ -10,6 +10,8 @@ public class Interactable : MonoBehaviour
     public GameObject mask;
     public GameObject getMask;
     public GameObject[] others;
+    public WinCondition win;
+    public SignalManager signalManager;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -20,7 +22,7 @@ public class Interactable : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     private void OnTriggerEnter(Collider other)
@@ -33,13 +35,15 @@ public class Interactable : MonoBehaviour
             Enter = true;
             others[0].SetActive(false);
             others[1].SetActive(false);
+            win = GameObject.Find("winCondition").GetComponent<WinCondition>();
+
 
             if (Input.GetKeyDown(KeyCode.Space))
             {
-               /* other.GetComponent<CharacterController>().enabled = false;
-                this.gameObject.GetComponent<Template_UIManager>().Interact(this.GetComponent<VIDE_Assign>());
-                this.gameObject.GetComponent<Template_UIManager>().enabled = true;
-                interact.SetActive(false);*/
+                /* other.GetComponent<CharacterController>().enabled = false;
+                 this.gameObject.GetComponent<Template_UIManager>().Interact(this.GetComponent<VIDE_Assign>());
+                 this.gameObject.GetComponent<Template_UIManager>().enabled = true;
+                 interact.SetActive(false);*/
             }
         }
     }
@@ -72,7 +76,8 @@ public class Interactable : MonoBehaviour
                 {
                     this.gameObject.GetComponent<VIDE_Assign>().overrideStartNode = 5;
                 }
-            } else if (this.transform.parent.name == "Ox")
+            }
+            else if (this.transform.parent.name == "Ox")
             {
                 if (currentMask == null || currentMask.gameObject != mask.gameObject)
                 {

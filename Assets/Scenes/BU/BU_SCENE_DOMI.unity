@@ -3071,6 +3071,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1468685175}
     - target: {fileID: 1687599416717711505, guid: 08492f0392916ed478f7792a91828b4a, type: 3}
+      propertyPath: unlockThis
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1687599416717711505, guid: 08492f0392916ed478f7792a91828b4a, type: 3}
       propertyPath: others.Array.size
       value: 2
       objectReference: {fileID: 0}
@@ -5807,6 +5811,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WinCondition
   winscreen: {fileID: 0}
+  signalManager: {fileID: 0}
+  unlock: 
 --- !u!4 &2136833215
 Transform:
   m_ObjectHideFlags: 0
