@@ -1,18 +1,19 @@
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Rendering;
+using UnityEngine.Rendering.Universal;
 
 public abstract class Mask: MonoBehaviour {
 
-    [SerializeField] protected GameObject visualMask; //TODO make the good Type
+    [SerializeField] protected GameObject visualMask;
     [SerializeField] protected Image filterColorImage;
     [SerializeField] protected string maskName;
     [SerializeField] protected bool isUnlock = false;
+    [SerializeField] protected Material visionMaterial;
 
     protected bool isEquipped = false;
     protected Color defaultFilterColors;
 
-
-   
 
     public void Start() {
         if (filterColorImage != null)
@@ -62,4 +63,6 @@ public abstract class Mask: MonoBehaviour {
 
     protected abstract void ApplyCameraEffect();
     protected abstract void RemoveCameraEffect();
+    protected abstract void UpdateMaterial();
+
 }

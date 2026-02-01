@@ -30,9 +30,6 @@ public class MaskManager : MonoBehaviour {
         } else if (Keyboard.current.digit0Key.wasPressedThisFrame) {
             UnequipCurrentMask();
         }
-
-
-
     }
 
     public Mask GetCurrentMask()
