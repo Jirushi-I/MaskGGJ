@@ -28,6 +28,8 @@ public class MaskManager : MonoBehaviour {
         } else if (Keyboard.current.digit3Key.wasPressedThisFrame) {
             EquipMask(2);
         } else if (Keyboard.current.digit0Key.wasPressedThisFrame) {
+
+            Debug.Log("Here");
             UnequipCurrentMask();
         }
     }
