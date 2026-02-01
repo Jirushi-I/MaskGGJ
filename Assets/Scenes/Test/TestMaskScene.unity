@@ -131,7 +131,7 @@ GameObject:
   - component: {fileID: 85996927}
   - component: {fileID: 85996926}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Vision
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -168,7 +168,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 2100000, guid: 0f72aa2ce5064e240971f0ddbc65db05, type: 2}
   m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
@@ -624,13 +624,17 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9626a29c93423bf408d274af3feb9623, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::GreenMask
+  m_EditorClassIdentifier: Assembly-CSharp::LionMask
   visualMask: {fileID: 1048537960}
   filterColorImage: {fileID: 85996926}
-  maskName: Lion Mask
+  maskName: Lion
   isUnlock: 0
+  visionMaterial: {fileID: 2100000, guid: 0f72aa2ce5064e240971f0ddbc65db05, type: 2}
   lionFilterColors: {r: 0.81, g: 0.85, b: 0.25, a: 1}
-  filterIntensity: 0.6
+  visionRadius: 0.4
+  edgeSoftness: 0.14
+  blurAmount: 0
+  centerAlpha: 0.1
 --- !u!1 &655502315
 GameObject:
   m_ObjectHideFlags: 0
@@ -664,7 +668,6 @@ MonoBehaviour:
   - {fileID: 1794244618}
   - {fileID: 556348113}
   - {fileID: 1206432972}
-  playerCamera: {fileID: 554643561}
 --- !u!4 &655502317
 Transform:
   m_ObjectHideFlags: 0
@@ -838,13 +841,17 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8300a2683e4b61b438559c8ca64e580a, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::RedMask
+  m_EditorClassIdentifier: Assembly-CSharp::OxMask
   visualMask: {fileID: 1048537960}
   filterColorImage: {fileID: 85996926}
-  maskName: Ox Mask
+  maskName: Ox
   isUnlock: 0
+  visionMaterial: {fileID: 2100000, guid: 0f72aa2ce5064e240971f0ddbc65db05, type: 2}
   oxFilterColors: {r: 1, g: 0, b: 0, a: 1}
-  filterIntensity: 0.7
+  visionRadius: 1
+  edgeSoftness: 0.15
+  blurAmount: 3
+  centerAlpha: 0.7
 --- !u!1 &1385502991
 GameObject:
   m_ObjectHideFlags: 0
@@ -956,13 +963,17 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 981b7740f608ac043b2631c2c4aeb64b, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Deer
+  m_EditorClassIdentifier: Assembly-CSharp::DeerMask
   visualMask: {fileID: 1048537960}
   filterColorImage: {fileID: 85996926}
-  maskName: Deer Mask
+  maskName: Deer
   isUnlock: 0
+  visionMaterial: {fileID: 2100000, guid: 0f72aa2ce5064e240971f0ddbc65db05, type: 2}
   deerFilterColors: {r: 1, g: 1, b: 1, a: 1}
-  filterIntensity: 0.6
+  visionRadius: 0.6
+  edgeSoftness: 0.4
+  blurAmount: 2
+  centerAlpha: 0.23
 --- !u!1 &1876822998
 GameObject:
   m_ObjectHideFlags: 0
