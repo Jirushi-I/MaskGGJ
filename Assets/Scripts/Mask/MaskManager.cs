@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 using System.Collections;
+using System.Linq;
 using UnityEngine.UI;
 
 
@@ -12,13 +13,20 @@ public class MaskManager : MonoBehaviour {
     private Mask currentMask;
     private int currentMaskIndex = -1;
 
+    private Mask[] unlockedListMask;
+
     public void OnEnable() {
         Instance = this;
+        unlockedListMask = new Mask[0];
+
+
         SignalManager.Instance.OnUnlockTheMask += UnlockMask;
+        SignalManager.Instance.OnUnlockTheMaskSpecific += UnlockMaskSpecific;
     }
 
     public void OnDisable() {
         SignalManager.Instance.OnUnlockTheMask -= UnlockMask;
+        SignalManager.Instance.OnUnlockTheMaskSpecific -= UnlockMaskSpecific;
     }
 
     void Update () {
@@ -74,14 +82,44 @@ public class MaskManager : MonoBehaviour {
         currentMask.Equip();
     }
 
-    private void UnlockMask(string maskName) {
+    private Mask GetRandomLockedMask() {
+        Mask[] lockedMasks = availableMasks.Where(mask => !unlockedListMask.Contains(mask)).ToArray();
+
+
+        if (lockedMasks.Length == 0) {
+            Debug.Log("Tous les masques sont déjà débloqués !");
+            return null;
+        }
+
+        // Choisis un masque aléatoire parmi les masques verrouillés
+        int randomIndex = Random.Range(0, lockedMasks.Length);
+        return lockedMasks[randomIndex];
+    }
+
+    private void UnlockMask() {
+        Mask newMask = GetRandomLockedMask();
+
+        if (newMask != null) {
+
+            System.Array.Resize(ref unlockedListMask, unlockedListMask.Length + 1);
+            unlockedListMask[unlockedListMask.Length - 1] = newMask;
+
+            Debug.Log("Nouveau masque débloqué : " + newMask.name);
+        } else {
+            Debug.Log("Aucun nouveau masque à débloquer");
+            return;
+        }
+        newMask.Unlock();
+    }
+
+    private void UnlockMaskSpecific(string maskName) {
         foreach (var mask in availableMasks) {
             if (mask.MaskName == maskName) {
                 mask.Unlock();
-                return;
+                System.Array.Resize(ref unlockedListMask, unlockedListMask.Length + 1);
+                unlockedListMask[unlockedListMask.Length - 1] = mask;
             }
         }
-        Debug.LogWarning($"Mask '{maskName}' not found!");
     }
 
     public void UnequipCurrentMask()

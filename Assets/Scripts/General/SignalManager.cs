@@ -15,9 +15,14 @@ public class SignalManager : MonoBehaviour
         }
     }
 
-    public event Action<string> OnUnlockTheMask;
+    public event Action OnUnlockTheMask;
+    public event Action<string> OnUnlockTheMaskSpecific;
    
-    public void EmitOnUnlockTheMask(string nameMask) {
-        OnUnlockTheMask?.Invoke(nameMask);
+    public void EmitOnUnlockTheMask() {
+        OnUnlockTheMask?.Invoke();
+    }
+   
+    public void EmitOnUnlockTheMaskSpecific(string nameMask) {
+        OnUnlockTheMaskSpecific?.Invoke(nameMask);
     }
 }
