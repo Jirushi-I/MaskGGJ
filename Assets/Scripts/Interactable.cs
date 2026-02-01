@@ -9,6 +9,7 @@ public class Interactable : MonoBehaviour
     GameObject maskmanager;
     public GameObject mask;
     public GameObject getMask;
+    public GameObject[] others;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -30,6 +31,8 @@ public class Interactable : MonoBehaviour
             interact.SetActive(true);
             player = other.gameObject;
             Enter = true;
+            others[0].SetActive(false);
+            others[1].SetActive(false);
 
             if (Input.GetKeyDown(KeyCode.Space))
             {
@@ -46,6 +49,8 @@ public class Interactable : MonoBehaviour
         interact.SetActive(false);
 
         Enter = false;
+        others[0].SetActive(true);
+        others[1].SetActive(true);
     }
 
     public void Interact()
