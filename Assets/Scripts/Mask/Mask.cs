@@ -34,7 +34,7 @@ public abstract class Mask: MonoBehaviour {
     public virtual void Equip()
     {
         if (isUnlock)
-            Debug.Log(maskName + "is not unlock yet ");
+            Debug.Log(maskName + " is not unlock yet ");
 
         if (!isEquipped && isUnlock)
         {
@@ -75,11 +75,11 @@ public abstract class Mask: MonoBehaviour {
     }
     public virtual void Unlock() {
         if (isUnlock) {
-            Debug.Log(maskName + "is already unlock");
+            Debug.Log(maskName + " is already unlock");
         }
 
         isUnlock = true;
-        Debug.Log(maskName + "is unlock");
+        Debug.Log(maskName + " is unlock");
     }
 
     protected abstract void ApplyCameraEffect();
