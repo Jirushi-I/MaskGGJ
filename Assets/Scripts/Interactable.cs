@@ -6,9 +6,12 @@ public class Interactable : MonoBehaviour
     private GameObject player;
     public GameObject interact;
     bool Enter;
+    GameObject maskmanager;
+    public GameObject mask;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        maskmanager = GameObject.Find("MaskManager");
         Cursor.visible = false;
     }
 
@@ -48,12 +51,24 @@ public class Interactable : MonoBehaviour
     {
         if (Enter == true)
         {
+            if (maskmanager.GetComponent<MaskManager>().GetCurrentMask().gameObject != mask.gameObject || maskmanager.GetComponent<MaskManager>().GetCurrentMask() == null)
+            {
+                this.gameObject.GetComponent<VIDE_Assign>().overrideStartNode = 4;
+            }
+            else if (maskmanager.GetComponent<MaskManager>().GetCurrentMask().gameObject == mask.gameObject)
+            {
+                this.gameObject.GetComponent<VIDE_Assign>().overrideStartNode = 5;
+            }
+
             player.GetComponent<CharacterController>().enabled = false;
             this.gameObject.GetComponent<Template_UIManager>().Interact(this.GetComponent<VIDE_Assign>());
             this.gameObject.GetComponent<Template_UIManager>().enabled = true;
             interact.SetActive(false);
             
             Cursor.visible = true;
+
+            
+
         }
     }
 
