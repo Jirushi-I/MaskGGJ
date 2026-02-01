@@ -3065,7 +3065,7 @@ PrefabInstance:
     - target: {fileID: 1687599416717711505, guid: 08492f0392916ed478f7792a91828b4a, type: 3}
       propertyPath: mask
       value: 
-      objectReference: {fileID: 1181012874}
+      objectReference: {fileID: 1540388115}
     - target: {fileID: 1687599416717711505, guid: 08492f0392916ed478f7792a91828b4a, type: 3}
       propertyPath: interact
       value: 
@@ -6008,9 +6008,29 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 272788112}
     - target: {fileID: 3522016203805317294, guid: e5c3f9db0b245064bb2363575661ceb5, type: 3}
+      propertyPath: assignedID
+      value: 45481
+      objectReference: {fileID: 0}
+    - target: {fileID: 3522016203805317294, guid: e5c3f9db0b245064bb2363575661ceb5, type: 3}
+      propertyPath: assignedIndex
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 3522016203805317294, guid: e5c3f9db0b245064bb2363575661ceb5, type: 3}
       propertyPath: targetManager
       value: 
       objectReference: {fileID: 257385336}
+    - target: {fileID: 3522016203805317294, guid: e5c3f9db0b245064bb2363575661ceb5, type: 3}
+      propertyPath: assignedDialogue
+      value: MonsieurStag
+      objectReference: {fileID: 0}
+    - target: {fileID: 6178146881834582850, guid: e5c3f9db0b245064bb2363575661ceb5, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 82e397a621233e14190a51ddc3e97178, type: 3}
+    - target: {fileID: 6178146881834582850, guid: e5c3f9db0b245064bb2363575661ceb5, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6675628308336996893, guid: e5c3f9db0b245064bb2363575661ceb5, type: 3}
       propertyPath: m_Name
       value: Deer
@@ -6022,7 +6042,7 @@ PrefabInstance:
     - target: {fileID: 8619935770548290884, guid: e5c3f9db0b245064bb2363575661ceb5, type: 3}
       propertyPath: interact
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1468685175}
     - target: {fileID: 8619935770548290884, guid: e5c3f9db0b245064bb2363575661ceb5, type: 3}
       propertyPath: others.Array.size
       value: 2
