@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{f8082a97-df61-44d9-af28-4addb86db23a}">
+		<property name="assetPath">
+			<value>MaskGGJ_002.wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>47</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{86fc9c90-3f52-4e01-a4c0-4fa34e86644e}</destination>
+		</relationship>
+	</object>
+</objects>
