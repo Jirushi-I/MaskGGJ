@@ -365,6 +365,9 @@
 		<property name="length">
 			<value>2.2507412398921831</value>
 		</property>
+		<property name="startOffset">
+			<value>4</value>
+		</property>
 		<relationship name="event">
 			<destination>{a4587b5f-efa6-4b62-962b-0f4e60157c59}</destination>
 		</relationship>
@@ -864,10 +867,10 @@
 	</object>
 	<object class="AutomationPoint" id="{eba7aaf9-8c59-4c20-b463-5867784282f6}">
 		<property name="position">
-			<value>3</value>
+			<value>2</value>
 		</property>
 		<property name="value">
-			<value>-40</value>
+			<value>-80</value>
 		</property>
 	</object>
 	<object class="AutomationPoint" id="{b8ba6133-0cea-46be-b360-0ca7aae9be20}">
