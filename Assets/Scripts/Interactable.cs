@@ -130,4 +130,10 @@ public class Interactable : MonoBehaviour
         Cursor.visible = false;
     }
 
+    public void CompletDialoguePlayer() {
+        player.GetComponent<CharacterController>().enabled = true;
+        FMODUnity.RuntimeManager.PlayOneShot("event:/Succeed");
+        Cursor.visible = false;
+    }
+
 }

@@ -61,6 +61,7 @@ public class LocalMusicManager : MonoBehaviour
 
     public void PlaySucceedSound()
     {
+        Debug.Log("Play");
         FMODUnity.RuntimeManager.PlayOneShot("event:/Succeed");
     }
 
