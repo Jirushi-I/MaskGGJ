@@ -901,7 +901,7 @@ MonoBehaviour:
       x: 1650
       y: -610
       width: 348
-      height: 74
+      height: 152.57333
     pTag: 
     expand: 0
     sprite: {fileID: 0}
@@ -991,7 +991,7 @@ MonoBehaviour:
       x: 2780
       y: -1060
       width: 348
-      height: 74
+      height: 204.14001
     pTag: 
     expand: 0
     sprite: {fileID: 0}
@@ -1021,7 +1021,7 @@ MonoBehaviour:
       x: 3150
       y: -1100
       width: 348
-      height: 74
+      height: 138.04666
     pTag: 
     expand: 0
     sprite: {fileID: 0}
@@ -1111,7 +1111,7 @@ MonoBehaviour:
       x: 2400
       y: -570
       width: 348
-      height: 74
+      height: 138.04666
     pTag: 
     expand: 0
     sprite: {fileID: 0}
@@ -1376,7 +1376,7 @@ MonoBehaviour:
       height: 170
     ID: 33
     outPlayerIndex: -1
-    outActionIndex: 5
+    outActionIndex: -1
     more: 0
     ovrStartNode: -1
     renameDialogue: 
@@ -1461,15 +1461,15 @@ MonoBehaviour:
     renameDialogue: 
   - pauseHere: 0
     gameObjectName: Interactable_Test
-    methodName: ResetPlayer
+    methodName: CompletDialoguePlayer
     nameIndex: 1
-    methodIndex: 2
+    methodIndex: 3
     paramIndex: 0
     opts:
     - '[No method]'
     - Interact
     - ResetPlayer
-    - getMaskSound
+    - CompletDialoguePlayer
     - CallNext
     - SelectChoice
     - GetAssigned
@@ -1482,22 +1482,70 @@ MonoBehaviour:
     - '[No object]'
     - Interactable_Test
     - Interactable_Test
+    - LocalMusicManager
     - Interactable_Test
     - UIMANAGER
     - CinemachineBrain
     - SignalManager
     - MaskManager
+    - winCondition
     param_bool: 0
     param_string: 
     param_int: 0
     param_float: 0
     rect:
       serializedVersion: 2
-      x: 3640
-      y: -370
+      x: 3610
+      y: -390
       width: 200
       height: 170
     ID: 36
+    outPlayerIndex: -1
+    outActionIndex: 5
+    more: 0
+    ovrStartNode: -1
+    renameDialogue: 
+  - pauseHere: 0
+    gameObjectName: Interactable_Test
+    methodName: '[No method]'
+    nameIndex: 1
+    methodIndex: 0
+    paramIndex: -1
+    opts:
+    - '[No method]'
+    - Interact
+    - ResetPlayer
+    - CompletDialoguePlayer
+    - CallNext
+    - SelectChoice
+    - GetAssigned
+    - AssignNew
+    - SaveState
+    - LoadState
+    - OnBeforeSerialize
+    - OnAfterDeserialize
+    nameOpts:
+    - '[No object]'
+    - Interactable_Test
+    - Interactable_Test
+    - LocalMusicManager
+    - Interactable_Test
+    - UIMANAGER
+    - CinemachineBrain
+    - SignalManager
+    - MaskManager
+    - winCondition
+    param_bool: 0
+    param_string: 
+    param_int: 0
+    param_float: 0
+    rect:
+      serializedVersion: 2
+      x: 3840
+      y: -260
+      width: 200
+      height: 170
+    ID: 37
     outPlayerIndex: -1
     outActionIndex: -1
     more: 0

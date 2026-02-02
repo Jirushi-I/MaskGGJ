@@ -66,13 +66,12 @@ public class MaskManager : MonoBehaviour {
         // Unequip the current mask
         if (currentMask != null && currentMask.IsEquipped)
         {
+            Debug.Log("Test");
             currentMask.Unequip();
         }
 
         currentMaskIndex = index;
         currentMask = availableMasks[index];
-
-        Debug.Log(currentMask + " is mask" );
 
         if (!currentMask.IsUnlockMask) {
             Debug.LogWarning(currentMask + " is not unlock");
@@ -103,8 +102,10 @@ public class MaskManager : MonoBehaviour {
 
             System.Array.Resize(ref unlockedListMask, unlockedListMask.Length + 1);
             unlockedListMask[unlockedListMask.Length - 1] = newMask;
+
             FMODUnity.RuntimeManager.PlayOneShot("event:/Succeed");
             FMODUnity.RuntimeManager.StudioSystem.setParameterByName("SucceedDialogue", 1);
+
             Debug.Log("Nouveau masque d�bloqu� : " + newMask.name);
         } else {
             Debug.Log("Aucun nouveau masque � d�bloquer");

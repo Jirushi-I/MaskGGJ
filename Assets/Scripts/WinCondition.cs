@@ -9,6 +9,7 @@ public class WinCondition : MonoBehaviour
     public void Progress()
     {
         counter++;
+        //LocalMusicManager.PlaySucceedSound();
         if (counter < 3) {
             SignalManager.Instance.EmitOnUnlockTheMask();
         }
