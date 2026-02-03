@@ -3,10 +3,13 @@ using UnityEngine.InputSystem;
 
 public class Body : MonoBehaviour
 {
-    CharacterController controller;
+    [SerializeField] private float speed = 2.5f;
+    [SerializeField] private float sprintMultiplier = 2f;
 
+    CharacterController controller;
     Transform head;
     Vector3 movement;
+    bool isSprinting = false;
     
     void Awake()
     {
@@ -18,7 +21,8 @@ public class Body : MonoBehaviour
     void Update()
     {
         if (controller != null && controller.enabled) {
-            controller.SimpleMove(head.TransformDirection(movement));
+            float currentSpeed = isSprinting ? speed * sprintMultiplier : speed;
+            controller.SimpleMove(head.TransformDirection(movement) * currentSpeed);
         }
     }
 
@@ -26,5 +30,16 @@ public class Body : MonoBehaviour
     {
         Vector2 controlDirection = context.ReadValue<Vector2>();
         movement = new Vector3(controlDirection.x, 0, controlDirection.y);
+    }
+
+    public void Sprint(InputAction.CallbackContext context) {
+       
+        if (context.performed) // Button pressed
+        {
+            isSprinting = true;
+        } else if (context.canceled) // Button release
+        {
+            isSprinting = false;
+        }
     }
 }
