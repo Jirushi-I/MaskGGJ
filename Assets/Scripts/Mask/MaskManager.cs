@@ -37,8 +37,6 @@ public class MaskManager : MonoBehaviour {
             EquipMask(1);
         } else if (Keyboard.current.digit3Key.wasPressedThisFrame) {
             EquipMask(2);
-        } else if (Keyboard.current.digit0Key.wasPressedThisFrame) {
-            UnequipCurrentMask();
         }
     }
 
@@ -51,24 +49,22 @@ public class MaskManager : MonoBehaviour {
 
         // Check if the index is within the valid range
          if (index < 0 || index >= availableMasks.Length)
-        {
+         {
             Debug.LogWarning("Invalid mask index!");
             return;
-        }
+         }
 
         // Check if the mask is already equipped
         if (currentMaskIndex == index && currentMask != null && currentMask.IsEquipped)
         {
-            Debug.Log("Mask already equipped!");
-            return;
+            currentMask.Unequip();
         }
 
         // Unequip the current mask
-        if (currentMask != null && currentMask.IsEquipped)
-        {
-            Debug.Log("Test");
-            currentMask.Unequip();
-        }
+        //if (currentMask != null && currentMask.IsEquipped)
+        //{
+        //    currentMask.Unequip();
+        //}
 
         currentMaskIndex = index;
         currentMask = availableMasks[index];
@@ -77,8 +73,9 @@ public class MaskManager : MonoBehaviour {
             Debug.LogWarning(currentMask + " is not unlock");
             return;
         }
-
+        Debug.Log(currentMask + " Test");
         currentMask.Equip();
+
     }
 
     private Mask GetRandomLockedMask() {

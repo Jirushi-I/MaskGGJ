@@ -54,6 +54,7 @@ public class Template_UIManager : MonoBehaviour
 
     #endregion
 
+    [SerializeField] private DialogueManager dialogueManager;
     #region MAIN
 
     void Awake()
@@ -72,12 +73,9 @@ public class Template_UIManager : MonoBehaviour
         var doNotInteract = PreConditions(dialogue);
         if (doNotInteract) return;
 
-        if (!VD.isActive)
-        {
+        if (!VD.isActive) {
             Begin(dialogue);
-        }
-        else
-        {
+        } else {
             CallNext();
         }
     }
@@ -201,8 +199,12 @@ public class Template_UIManager : MonoBehaviour
             //Set node sprite if there's any, otherwise try to use default sprite
             if (data.sprite != null)
                 playerSprite.sprite = data.sprite;
-            else if (VD.assigned.defaultPlayerSprite != null)
-                playerSprite.sprite = VD.assigned.defaultPlayerSprite;
+            else {
+                if (dialogueManager != null)
+                    playerSprite.sprite = dialogueManager.GetCurrentMaskSprite();
+                else if (VD.assigned.defaultPlayerSprite != null)
+                    playerSprite.sprite = VD.assigned.defaultPlayerSprite;
+            }
 
             SetChoices(data.comments);
 

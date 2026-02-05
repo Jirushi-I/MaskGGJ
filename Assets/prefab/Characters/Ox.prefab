@@ -172,7 +172,6 @@ GameObject:
   - component: {fileID: 7265826251368093212}
   - component: {fileID: 4808867083760329786}
   - component: {fileID: 1455576948704885545}
-  - component: {fileID: 8966159731783443142}
   - component: {fileID: 8727963842735803558}
   m_Layer: 0
   m_Name: Interactable_Test
@@ -279,45 +278,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Interactable
   player: {fileID: 0}
+  maskmanager: {fileID: 0}
+  videAssign: {fileID: 0}
+  templateUI: {fileID: 0}
   interact: {fileID: 0}
   mask: {fileID: 0}
-  getMask: {fileID: 0}
   others:
   - {fileID: 0}
   - {fileID: 0}
---- !u!114 &8966159731783443142
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3892905733688171817}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e77d6d335b46cb642b513b40738603f0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogueContainer: {fileID: 0}
-  NPC_Container: {fileID: 0}
-  playerContainer: {fileID: 0}
-  NPC_Text: {fileID: 0}
-  NPC_label: {fileID: 0}
-  NPCSprite: {fileID: 0}
-  playerSprite: {fileID: 0}
-  playerLabel: {fileID: 0}
-  maxPlayerChoices:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  audioSource: {fileID: 0}
-  interactionKey: 13
-  NPC_animateText: 1
-  player_animateText: 1
-  NPC_secsPerLetter: 0.02
-  player_secsPerLetter: 0.02
-  choiceInterval: 0.1
-  useNavigation: 1
 --- !u!114 &8727963842735803558
 MonoBehaviour:
   m_ObjectHideFlags: 0

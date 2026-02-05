@@ -3,55 +3,29 @@ using UnityEngine.InputSystem;
 
 public class Interactable : MonoBehaviour
 {
-    public GameObject player;
-    public GameObject interact;
-    bool Enter;
-    GameObject maskmanager;
-    public GameObject mask;
-    public GameObject[] others;
-    public WinCondition win;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        maskmanager = GameObject.Find("MaskManager");
-    }
+    [SerializeField] private CharacterController player;
+    [SerializeField] private MaskManager maskmanager;
+    [SerializeField] private VIDE_Assign videAssign;
+    [SerializeField] private Template_UIManager templateUI;
+    [SerializeField] private GameObject mask;
+    [SerializeField] private GameObject interact;
 
-    // Update is called once per frame
-    void Update()
-    {
+    private bool Enter;
 
-    }
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Player")
         {
-            //other.GetComponent<CharacterController>().enabled = false;
             interact.SetActive(true);
-            player = other.gameObject;
             Enter = true;
-            others[0].SetActive(false);
-            others[1].SetActive(false);
-            win = GameObject.Find("winCondition").GetComponent<WinCondition>();
-
-
-            if (Input.GetKeyDown(KeyCode.Space))
-            {
-                /* other.GetComponent<CharacterController>().enabled = false;
-                 this.gameObject.GetComponent<Template_UIManager>().Interact(this.GetComponent<VIDE_Assign>());
-                 this.gameObject.GetComponent<Template_UIManager>().enabled = true;
-                 interact.SetActive(false);*/
-            }
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
         interact.SetActive(false);
-
         Enter = false;
-        others[0].SetActive(true);
-        others[1].SetActive(true);
     }
 
     public void Interact()
@@ -59,20 +33,17 @@ public class Interactable : MonoBehaviour
         if (Enter == true && player != null)
         {
             if (maskmanager == null) return;
-            MaskManager maskManagerComponent = maskmanager?.GetComponent<MaskManager>();
-
-            if (maskManagerComponent == null) return;
-            Mask currentMask = maskManagerComponent?.GetCurrentMask();
+            Mask currentMask = maskmanager?.GetCurrentMask();
             if (this.transform.parent.name == "Lion")
             {
                 MusicManager.Instance.SetCharacterLion();
                 if (currentMask == null || currentMask.gameObject != mask.gameObject)
                 {
-                    this.gameObject.GetComponent<VIDE_Assign>().overrideStartNode = 4;
+                    videAssign.overrideStartNode = 4;
                 }
                 else if (currentMask.gameObject == mask.gameObject)
                 {
-                    this.gameObject.GetComponent<VIDE_Assign>().overrideStartNode = 5;
+                    videAssign.overrideStartNode = 5;
                 }
                 
             }
@@ -81,11 +52,11 @@ public class Interactable : MonoBehaviour
                 MusicManager.Instance.SetCharacterOx();
                 if (currentMask == null || currentMask.gameObject != mask.gameObject)
                 {
-                    this.gameObject.GetComponent<VIDE_Assign>().overrideStartNode = 0;
+                    videAssign.overrideStartNode = 0;
                 }
                 else if (currentMask.gameObject == mask.gameObject)
                 {
-                    this.gameObject.GetComponent<VIDE_Assign>().overrideStartNode = 1;
+                    videAssign.overrideStartNode = 1;
                 }
             }
             else if (this.transform.parent.name == "Deer")
@@ -93,11 +64,11 @@ public class Interactable : MonoBehaviour
                 MusicManager.Instance.SetCharacterStag();
                 if (currentMask == null || currentMask.gameObject != mask.gameObject)
                 {
-                    this.gameObject.GetComponent<VIDE_Assign>().overrideStartNode = 33;
+                    videAssign.overrideStartNode = 33;
                 }
                 else if (currentMask.gameObject == mask.gameObject)
                 {
-                    this.gameObject.GetComponent<VIDE_Assign>().overrideStartNode = 0;
+                    videAssign.overrideStartNode = 0;
                 }
             }
 
@@ -106,15 +77,15 @@ public class Interactable : MonoBehaviour
 
             if (player != null)
             {
-                CharacterController controller = player.GetComponent<CharacterController>();
+                CharacterController controller = player;
                 if (controller != null)
                 {
                     controller.enabled = false;
                 }
             }
-            
-            this.gameObject.GetComponent<Template_UIManager>().Interact(this.GetComponent<VIDE_Assign>());
-            this.gameObject.GetComponent<Template_UIManager>().enabled = true;
+
+            templateUI.Interact(videAssign);
+            templateUI.enabled = true;
             interact?.SetActive(false);
 
             Cursor.visible = true;
@@ -123,7 +94,7 @@ public class Interactable : MonoBehaviour
 
     public void ResetPlayer()
     {
-        player.GetComponent<CharacterController>().enabled = true;
+        player.enabled = true;
         FMODUnity.RuntimeManager.PlayOneShot("event:/Fail");
 
 
@@ -131,7 +102,7 @@ public class Interactable : MonoBehaviour
     }
 
     public void CompletDialoguePlayer() {
-        player.GetComponent<CharacterController>().enabled = true;
+        player.enabled = true;
         FMODUnity.RuntimeManager.PlayOneShot("event:/Succeed");
         Cursor.visible = false;
     }

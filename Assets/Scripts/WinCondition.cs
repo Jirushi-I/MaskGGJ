@@ -3,8 +3,8 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 public class WinCondition : MonoBehaviour
 {
+    [SerializeField] private GameObject gameOver;
     private int counter = 0;
-    public GameObject winscreen;
 
     public void Progress()
     {
@@ -13,11 +13,9 @@ public class WinCondition : MonoBehaviour
         if (counter < 3) {
             SignalManager.Instance.EmitOnUnlockTheMask();
         }
-        Debug.Log(counter + " is counter");
         if (counter == 3)
         {
-            Debug.Log("win");
-            winscreen.SetActive(true);
+            gameOver.SetActive(true);
         }
     }
 
