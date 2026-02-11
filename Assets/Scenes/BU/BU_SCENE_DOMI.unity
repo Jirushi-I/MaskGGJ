@@ -1438,6 +1438,7 @@ MonoBehaviour:
   sprintMultiplier: 2
   player: {fileID: 382342360}
   head: {fileID: 1897382250}
+  headScript: {fileID: 1897382251}
 --- !u!1 &387313657
 GameObject:
   m_ObjectHideFlags: 0
@@ -6762,6 +6763,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ed4abaafdbe28848a7f5e18606af126, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Head
+  player: {fileID: 382342360}
   sensitivity: 20
   minPitch: 20
   maxPitch: 45

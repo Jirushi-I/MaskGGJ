@@ -2,33 +2,23 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class Head : MonoBehaviour
-{
-    CharacterController controller;
-    
-    float yaw;
-    float pitch;
+public class Head : MonoBehaviour {
 
-    public float sensitivity = 1f;
-    public float minPitch = 45f;
-    public float maxPitch = 45f;
+    [SerializeField] private CharacterController player;
+    [SerializeField] private float sensitivity = 1f;
+    [SerializeField] private float minPitch = 45f;
+    [SerializeField] private float maxPitch = 45f;
 
-    void Awake()
-    {
-        controller = GetComponentInParent<CharacterController>();
+    private float yaw;
+    private float pitch;
+
+    private void Start() {
+        SyncRotationValues();
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-
 
     public void Rotate(InputAction.CallbackContext context)
     {
-        if (controller.enabled == false) return;
+        if (player.enabled == false) return;
 
 
         Vector2 input = context.ReadValue<Vector2>() * sensitivity * Time.deltaTime;
@@ -39,4 +29,16 @@ public class Head : MonoBehaviour
 
         transform.rotation = Quaternion.Euler(pitch, yaw, 0f);
     }
+
+
+    // Méthode pour synchroniser yaw/pitch avec la rotation actuelle
+    public void SyncRotationValues() {
+        Vector3 currentRotation = transform.eulerAngles;
+        yaw = currentRotation.y;
+        pitch = currentRotation.x;
+
+        // Normalise pitch
+        if (pitch > 180) pitch -= 360;
+    }
+
 }

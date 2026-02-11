@@ -7,6 +7,7 @@ public class Body : MonoBehaviour
     [SerializeField] private float sprintMultiplier = 2f;
     [SerializeField] private CharacterController player;
     [SerializeField] private Transform head;
+    [SerializeField] private Head headScript;
 
     Vector3 movement;
     bool isSprinting = false;
@@ -44,5 +45,8 @@ public class Body : MonoBehaviour
     public void ActiveCharacterController(bool isActive) {
         Debug.Log("isActive" + isActive);
         player.enabled = isActive;
+
+        if (isActive && headScript != null) 
+            headScript.SyncRotationValues();
     }
 }
