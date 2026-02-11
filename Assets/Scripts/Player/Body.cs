@@ -5,24 +5,22 @@ public class Body : MonoBehaviour
 {
     [SerializeField] private float speed = 2.5f;
     [SerializeField] private float sprintMultiplier = 2f;
+    [SerializeField] private CharacterController player;
+    [SerializeField] private Transform head;
 
-    CharacterController controller;
-    Transform head;
     Vector3 movement;
     bool isSprinting = false;
-    
-    void Awake()
-    {
-        controller = GetComponent<CharacterController>();
-        head = GetComponentInChildren<Head>().transform;
-    }
 
+    private void Awake() {
+        ActiveCharacterController(false);
+    }
+    
     // Update is called once per frame
     void Update()
     {
-        if (controller != null && controller.enabled) {
+        if (player != null && player.enabled) {
             float currentSpeed = isSprinting ? speed * sprintMultiplier : speed;
-            controller.SimpleMove(head.TransformDirection(movement) * currentSpeed);
+            player.SimpleMove(head.TransformDirection(movement) * currentSpeed);
         }
     }
 
@@ -41,5 +39,10 @@ public class Body : MonoBehaviour
         {
             isSprinting = false;
         }
+    }
+
+    public void ActiveCharacterController(bool isActive) {
+        Debug.Log("isActive" + isActive);
+        player.enabled = isActive;
     }
 }
