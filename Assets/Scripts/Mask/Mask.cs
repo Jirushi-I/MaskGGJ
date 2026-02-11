@@ -23,7 +23,7 @@ public abstract class Mask: MonoBehaviour {
         {
             defaultFilterColors = new Color(0, 0, 0, 0);
         }
-        Debug.Log(imageMask);
+        //Debug.Log(imageMask);
         //visualMask?.SetActive(false);
     }
 

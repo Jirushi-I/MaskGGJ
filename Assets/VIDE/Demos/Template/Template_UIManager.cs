@@ -44,17 +44,24 @@ public class Template_UIManager : MonoBehaviour
     public float choiceInterval;
     [Tooltip("Tick this if using Navigation. Will prevent mixed input.")]
     public bool useNavigation;
+    [SerializeField] private DialogueManager dialogueManager;
+    [Header("Cooldown Settings")]
+    [SerializeField] private float dialogueCooldown = 2f;
 
 
-    bool dialoguePaused = false; //Custom variable to prevent the manager from calling VD.Next
-    bool animatingText = false; //Will help us know when text is currently being animated
-    int availableChoices = 0;
+    private bool dialoguePaused = false; //Custom variable to prevent the manager from calling VD.Next
+    private bool animatingText = false; //Will help us know when text is currently being animated
+    private int availableChoices = 0;
 
-    IEnumerator TextAnimator;
+    private IEnumerator TextAnimator;
+
+    private float _normalTypingSpeed;
+    private float _fastTypingSpeed = 0.00001f;
+    private bool _isOnCooldown = false;
+    public bool IsOnCooldown => _isOnCooldown;
 
     #endregion
 
-    [SerializeField] private DialogueManager dialogueManager;
     #region MAIN
 
     void Awake()
@@ -62,11 +69,17 @@ public class Template_UIManager : MonoBehaviour
 
         VD.LoadDialogues(); //Load all dialogues to memory so that we dont spend time doing so later
         //An alternative to this can be preloading dialogues from the VIDE_Assign component!
+        _normalTypingSpeed = NPC_secsPerLetter;
     }
 
     //Call this to begin the dialogue and advance through it
     public void Interact(VIDE_Assign dialogue)
     {
+        if(_isOnCooldown && !VD.isActive) {
+            Debug.Log("Still on cooldown");
+            return;
+        }
+
         //Sometimes, we might want to check the ExtraVariables and VAs before moving forward
         //We might want to modify the dialogue or perhaps go to another node, or dont start the dialogue at all
         //In such cases, the function will return true
@@ -102,7 +115,7 @@ public class Template_UIManager : MonoBehaviour
     public void CallNext()
     {
         //Let's not go forward if text is currently being animated, but let's speed it up.
-        if (animatingText) { CutTextAnim(); return; }
+        if (animatingText) { /*CutTextAnim();*/ return; }
 
         if (!dialoguePaused) //Only if
         {
@@ -127,9 +140,8 @@ public class Template_UIManager : MonoBehaviour
     }
 
     //Input related stuff (scroll through player choices and update highlight)
-    void Update()
-    {
-        if( VD.nodeData == null) return;
+    void Update() {
+        if (VD.nodeData == null) return;
         //Lets just store the Node Data variable for the sake of fewer words
         var data = VD.nodeData;
 
@@ -137,21 +149,17 @@ public class Template_UIManager : MonoBehaviour
         {
             //Scroll through Player dialogue options if dialogue is not paused and we are on a player node
             //For player nodes, NodeData.commentIndex is the index of the picked choice
-            if (!data.pausedAction && !animatingText && data.isPlayer && !useNavigation)
-            {
-                if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow))
-                {
+            if (!data.pausedAction && !animatingText && data.isPlayer && !useNavigation) {
+                if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow)) {
                     if (data.commentIndex < availableChoices - 1)
                         data.commentIndex++;
                 }
-                if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow))
-                {
+                if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow)) {
                     if (data.commentIndex > 0)
                         data.commentIndex--;
                 }
                 //Color the Player options. Blue for the selected one
-                for (int i = 0; i < maxPlayerChoices.Count; i++)
-                {
+                for (int i = 0; i < maxPlayerChoices.Count; i++) {
                     maxPlayerChoices[i].transform.GetChild(0).GetComponent<Text>().color = Color.white;
                     if (i == data.commentIndex) maxPlayerChoices[i].transform.GetChild(0).GetComponent<Text>().color = Color.yellow;
                 }
@@ -159,22 +167,24 @@ public class Template_UIManager : MonoBehaviour
 
             //Detect interact key
             if (Input.GetKeyDown(interactionKey))
-            {
                 Interact(VD.assigned);
-            }
-            if (Input.GetMouseButtonDown(0))
-            {
-                if (animatingText)
-                {
-                    Interact(VD.assigned);
+
+            if (Input.GetMouseButton(0)) {
+                if (animatingText) {
+                    NPC_secsPerLetter = _fastTypingSpeed;
+                    player_secsPerLetter = _fastTypingSpeed;
                 }
-                else if (!data.isPlayer)
-                {
+            } else {
+                NPC_secsPerLetter = _normalTypingSpeed;
+                player_secsPerLetter = _normalTypingSpeed;
+            } 
+
+            if (Input.GetMouseButtonDown(0)) {
+                if (!animatingText && !data.isPlayer)
                     Interact(VD.assigned);
-                }
             }
         }
-        //Note you could also use Unity's Navi system, in which case you would tick the useNavigation flag.
+            //Note you could also use Unity's Navi system, in which case you would tick the useNavigation flag.
     }
 
     //When we call VD.Next, nodeData will change. When it changes, OnNodeChange event will fire
@@ -301,9 +311,13 @@ public class Template_UIManager : MonoBehaviour
         VD.OnActionNode -= ActionHandler;
         VD.OnNodeChange -= UpdateUI;
         VD.OnEnd -= EndDialogue;
+
         if (dialogueContainer != null)
             dialogueContainer.SetActive(false);
+
         VD.EndDialogue();
+
+        StartCoroutine(DialogueCoolDown());
     }
 
     //To prevent errors
@@ -375,6 +389,16 @@ public class Template_UIManager : MonoBehaviour
 
         if (data.comments[data.commentIndex].Contains("[WEAPON]"))
             data.comments[data.commentIndex] = data.comments[data.commentIndex].Replace("[WEAPON]", "sword");
+    }
+
+    private IEnumerator DialogueCoolDown() {
+        _isOnCooldown = true;
+        Debug.Log("Dialogue cooldown started...");
+
+        yield return new WaitForSeconds(dialogueCooldown);
+
+        _isOnCooldown = false;
+        Debug.Log("Can talk again!");
     }
 
     #endregion

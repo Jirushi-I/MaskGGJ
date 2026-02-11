@@ -47,24 +47,34 @@ public class MaskManager : MonoBehaviour {
 
     private void EquipMask(int index) {
 
+
+
+        Debug.Log("currentMaskIndex: " + currentMaskIndex);
+        Debug.Log("index: " + index);
+        Debug.Log("currentMask: " + currentMask );
+
+
         // Check if the index is within the valid range
-         if (index < 0 || index >= availableMasks.Length)
+        if (index < 0 || index >= availableMasks.Length)
          {
             Debug.LogWarning("Invalid mask index!");
             return;
          }
 
         // Check if the mask is already equipped
-        if (currentMaskIndex == index && currentMask != null && currentMask.IsEquipped)
+        if (currentMask != null && currentMaskIndex == index && currentMask.IsEquipped)
         {
             currentMask.Unequip();
+            currentMask = null;
+            currentMaskIndex = -1;
+            return;
         }
 
         // Unequip the current mask
-        //if (currentMask != null && currentMask.IsEquipped)
-        //{
-        //    currentMask.Unequip();
-        //}
+        if (currentMask != null && currentMask.IsEquipped)
+        {
+            currentMask.Unequip();
+        }
 
         currentMaskIndex = index;
         currentMask = availableMasks[index];
@@ -73,8 +83,11 @@ public class MaskManager : MonoBehaviour {
             Debug.LogWarning(currentMask + " is not unlock");
             return;
         }
-        Debug.Log(currentMask + " Test");
         currentMask.Equip();
+
+        Debug.Log("Apres currentMaskIndex: " + currentMaskIndex);
+        Debug.Log("Apres index: " + index);
+        Debug.Log("Apres currentMask: " + currentMask);
 
     }
 

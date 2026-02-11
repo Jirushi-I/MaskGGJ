@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using VIDE_Data;
 
 public class Interactable : MonoBehaviour
 {
@@ -32,7 +33,11 @@ public class Interactable : MonoBehaviour
     {
         if (Enter == true && player != null)
         {
-            if (maskmanager == null) return;
+
+            if (VD.isActive)                return;
+            if (templateUI.IsOnCooldown)    return;
+            if (maskmanager == null)        return;
+
             Mask currentMask = maskmanager?.GetCurrentMask();
             if (this.transform.parent.name == "Lion")
             {
@@ -87,7 +92,6 @@ public class Interactable : MonoBehaviour
             templateUI.Interact(videAssign);
             templateUI.enabled = true;
             interact?.SetActive(false);
-
             Cursor.visible = true;
         }
     }
