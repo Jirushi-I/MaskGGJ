@@ -8,6 +8,10 @@ public class LoadScene : MonoBehaviour
 
     private string SCENE_MAIN_MENU = "Scenes/Game Start/MainMenu";
 
+    void Start() {
+        Cursor.visible = true;
+    }
+
     public void LoadGameMenu() {
         SceneManager.LoadScene(SCENE_GAME);
     }

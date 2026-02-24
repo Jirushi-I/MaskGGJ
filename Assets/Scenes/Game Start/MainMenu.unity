@@ -537,6 +537,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::VolumeSlider
   bus: SFX
+  slider: {fileID: 232780574}
 --- !u!1 &234428471
 GameObject:
   m_ObjectHideFlags: 0
@@ -697,6 +698,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::VolumeSlider
   bus: Music
+  slider: {fileID: 234559221}
 --- !u!1 &348643871
 GameObject:
   m_ObjectHideFlags: 0

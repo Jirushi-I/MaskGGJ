@@ -132,11 +132,7 @@ public class Template_UIManager : MonoBehaviour
     public void SelectChoice(int choice)
     {
         VD.nodeData.commentIndex = choice;
-
-        if (Input.GetMouseButtonUp(0))
-        {
-            Interact(VD.assigned);
-        }
+        Interact(VD.assigned);
     }
 
     //Input related stuff (scroll through player choices and update highlight)
@@ -149,27 +145,28 @@ public class Template_UIManager : MonoBehaviour
         {
             //Scroll through Player dialogue options if dialogue is not paused and we are on a player node
             //For player nodes, NodeData.commentIndex is the index of the picked choice
-            if (!data.pausedAction && !animatingText && data.isPlayer && !useNavigation) {
+            if (!data.pausedAction && !animatingText && data.isPlayer) {
+
                 if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow)) {
-                    if (data.commentIndex < availableChoices - 1)
+                    if (data.commentIndex < availableChoices - 1) 
                         data.commentIndex++;
                 }
                 if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow)) {
-                    if (data.commentIndex > 0)
+                    if (data.commentIndex > 0) 
                         data.commentIndex--;
-                }
-                //Color the Player options. Blue for the selected one
-                for (int i = 0; i < maxPlayerChoices.Count; i++) {
-                    maxPlayerChoices[i].transform.GetChild(0).GetComponent<Text>().color = Color.white;
-                    if (i == data.commentIndex) maxPlayerChoices[i].transform.GetChild(0).GetComponent<Text>().color = Color.yellow;
                 }
             }
 
-            //Detect interact key
-            if (Input.GetKeyDown(interactionKey))
-                Interact(VD.assigned);
+            // Colorisation
+            for (int i = 0; i < maxPlayerChoices.Count; i++) {
+                maxPlayerChoices[i].transform.GetChild(0).GetComponent<Text>().color = Color.white;
+                if (i == data.commentIndex)
+                    maxPlayerChoices[i].transform.GetChild(0).GetComponent<Text>().color = Color.yellow;
+            }
 
-            if (Input.GetMouseButton(0)) {
+            //Detect interact key
+
+            if (Input.GetMouseButton(0) || Input.GetKey(interactionKey)) {
                 if (animatingText) {
                     NPC_secsPerLetter = _fastTypingSpeed;
                     player_secsPerLetter = _fastTypingSpeed;
@@ -177,11 +174,23 @@ public class Template_UIManager : MonoBehaviour
             } else {
                 NPC_secsPerLetter = _normalTypingSpeed;
                 player_secsPerLetter = _normalTypingSpeed;
-            } 
+            }
 
             if (Input.GetMouseButtonDown(0)) {
-                if (!animatingText && !data.isPlayer)
+                if(!animatingText && !data.isPlayer) {
                     Interact(VD.assigned);
+                }
+            }
+
+            if (Input.GetKeyDown(interactionKey)) {
+                if (!animatingText) {
+                    if (data.isPlayer) {
+                        Debug.LogWarning(data.commentIndex);
+                        SelectChoice(data.commentIndex);
+                    } else {
+                        Interact(VD.assigned);
+                    }
+                }
             }
         }
             //Note you could also use Unity's Navi system, in which case you would tick the useNavigation flag.
@@ -317,7 +326,8 @@ public class Template_UIManager : MonoBehaviour
 
         VD.EndDialogue();
 
-        StartCoroutine(DialogueCoolDown());
+        if (gameObject.activeInHierarchy)
+            StartCoroutine(DialogueCoolDown());
     }
 
     //To prevent errors

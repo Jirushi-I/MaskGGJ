@@ -15,9 +15,18 @@ public class MaskManager : MonoBehaviour {
     private Mask[] unlockedListMask;
 
     public void OnEnable() {
+        if (Instance != null && Instance != this) {
+            Destroy(gameObject);
+            return;
+        }
+
         Instance = this;
         unlockedListMask = new Mask[0];
 
+        if (currentMask != null) {
+            currentMask.Unequip();
+            currentMask = null;
+        }
 
         SignalManager.Instance.OnUnlockTheMask += UnlockMask;
         SignalManager.Instance.OnUnlockTheMaskSpecific += UnlockMaskSpecific;

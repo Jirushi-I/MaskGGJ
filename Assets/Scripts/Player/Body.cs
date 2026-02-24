@@ -43,7 +43,7 @@ public class Body : MonoBehaviour
     }
 
     public void ActiveCharacterController(bool isActive) {
-        Debug.Log("isActive" + isActive);
+        //Debug.Log("isActive" + isActive);
         player.enabled = isActive;
 
         if (isActive && headScript != null) 

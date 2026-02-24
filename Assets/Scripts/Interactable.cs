@@ -11,6 +11,7 @@ public class Interactable : MonoBehaviour
     [SerializeField] private Template_UIManager templateUI;
     [SerializeField] private GameObject mask;
     [SerializeField] private GameObject interact;
+    [SerializeField] private GameManager gameManager;
 
     private bool Enter;
 
@@ -56,18 +57,15 @@ public class Interactable : MonoBehaviour
             else if (this.transform.parent.name == "Ox")
             {
                 MusicManager.Instance.SetCharacterOx();
-                Debug.Log("mask.gameObject " + mask.gameObject);
-                Debug.Log("currentMask " + currentMask);
+                //Debug.Log("mask.gameObject " + mask.gameObject);
+                //Debug.Log("currentMask " + currentMask);
                 if (currentMask == null || currentMask.gameObject != mask.gameObject || winCondition.IsOxSuccess)
                 {
                     videAssign.overrideStartNode = 0;
-
-                    Debug.Log("Here");
                 }
                 else if (currentMask.gameObject == mask.gameObject)
                 {
                     videAssign.overrideStartNode = 1;
-                    Debug.Log("La");
                 }
             }
             else if (this.transform.parent.name == "Deer")
@@ -98,7 +96,7 @@ public class Interactable : MonoBehaviour
             templateUI.Interact(videAssign);
             templateUI.enabled = true;
             interact?.SetActive(false);
-            Cursor.visible = true;
+            gameManager.VisibleCursor(true);
         }
     }
 
@@ -106,15 +104,13 @@ public class Interactable : MonoBehaviour
     {
         player.enabled = true;
         FMODUnity.RuntimeManager.PlayOneShot("event:/Fail");
-
-
-        Cursor.visible = false;
+        gameManager.VisibleCursor(false);
     }
 
     public void CompletDialoguePlayer() {
         player.enabled = true;
         FMODUnity.RuntimeManager.PlayOneShot("event:/Succeed");
-        Cursor.visible = false;
+        gameManager.VisibleCursor(false);
     }
 
 }
