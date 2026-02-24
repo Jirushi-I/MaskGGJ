@@ -41,7 +41,7 @@ public abstract class Mask: MonoBehaviour {
             if (maskTransition != null) {
                 maskTransition.TransitionToMask(() => {
                     ApplyCameraEffect();
-                    Debug.Log("Masque �quip�!");
+                    //Debug.Log("Masque �quip�!");
                 });
             } else {
                 // Pas de transition, application directe

@@ -11,7 +11,6 @@ public class MaskManager : MonoBehaviour {
     [SerializeField] private Mask[] availableMasks;
 
     private Mask currentMask;
-    private int currentMaskIndex = -1;
 
     private Mask[] unlockedListMask;
 
@@ -47,13 +46,6 @@ public class MaskManager : MonoBehaviour {
 
     private void EquipMask(int index) {
 
-
-
-        Debug.Log("currentMaskIndex: " + currentMaskIndex);
-        Debug.Log("index: " + index);
-        Debug.Log("currentMask: " + currentMask );
-
-
         // Check if the index is within the valid range
         if (index < 0 || index >= availableMasks.Length)
          {
@@ -61,34 +53,22 @@ public class MaskManager : MonoBehaviour {
             return;
          }
 
-        // Check if the mask is already equipped
-        if (currentMask != null && currentMaskIndex == index && currentMask.IsEquipped)
-        {
-            currentMask.Unequip();
-            currentMask = null;
-            currentMaskIndex = -1;
-            return;
-        }
+        Mask newMask = availableMasks[index];
 
-        // Unequip the current mask
-        if (currentMask != null && currentMask.IsEquipped)
-        {
-            currentMask.Unequip();
-        }
-
-        currentMaskIndex = index;
-        currentMask = availableMasks[index];
-
-        if (!currentMask.IsUnlockMask) {
+        if (!newMask.IsUnlockMask) { //Check is the new mask is unlocked
             Debug.LogWarning(currentMask + " is not unlock");
             return;
+        }else if (currentMask != null) { //Check the player already have an equiped mask
+            currentMask.Unequip();
+            if (currentMask == newMask) { // Unequip the same Mask -> Ox is already equiped and you equip Ox
+                currentMask = null;
+                return;
+            }
         }
+
+        //Equip the mask
+        currentMask = newMask;
         currentMask.Equip();
-
-        Debug.Log("Apres currentMaskIndex: " + currentMaskIndex);
-        Debug.Log("Apres index: " + index);
-        Debug.Log("Apres currentMask: " + currentMask);
-
     }
 
     private Mask GetRandomLockedMask() {
@@ -131,16 +111,6 @@ public class MaskManager : MonoBehaviour {
                 System.Array.Resize(ref unlockedListMask, unlockedListMask.Length + 1);
                 unlockedListMask[unlockedListMask.Length - 1] = mask;
             }
-        }
-    }
-
-    public void UnequipCurrentMask()
-    {
-        if (currentMask != null && currentMask.IsEquipped)
-        {
-            currentMask.Unequip();
-            currentMask = null;
-            currentMaskIndex = -1;
         }
     }
 }

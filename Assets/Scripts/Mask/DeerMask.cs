@@ -21,7 +21,7 @@ public class DeerMask : Mask {
         imageMask.sprite = spriteMasks;
         filterColorImage.color = deerFilterColors;
         UpdateMaterial();
-        Debug.Log(maskName + " is Applied");
+        //Debug.Log(maskName + " is Applied");
     }
 
     protected override void RemoveCameraEffect() {

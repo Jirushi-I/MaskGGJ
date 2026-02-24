@@ -281,11 +281,8 @@ MonoBehaviour:
   maskmanager: {fileID: 0}
   videAssign: {fileID: 0}
   templateUI: {fileID: 0}
-  interact: {fileID: 0}
   mask: {fileID: 0}
-  others:
-  - {fileID: 0}
-  - {fileID: 0}
+  interact: {fileID: 0}
 --- !u!114 &8727963842735803558
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -322,7 +319,7 @@ MonoBehaviour:
   interactionCount: 0
   alias: Mister Ox
   overrideStartNode: -1
-  defaultNPCSprite: {fileID: 21300000, guid: 3a2a18b618d16924ba78f3109ec2aa8a, type: 3}
+  defaultNPCSprite: {fileID: 21300000, guid: 7ba748b8c1f8f78409c911f943364fd2, type: 3}
   defaultPlayerSprite: {fileID: 21300000, guid: ca1397691a4e7d54e88268b636508a09, type: 3}
   targetManager: {fileID: 0}
   preload: 0

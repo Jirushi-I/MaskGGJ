@@ -6,6 +6,7 @@ public class Interactable : MonoBehaviour
 {
     [SerializeField] private CharacterController player;
     [SerializeField] private MaskManager maskmanager;
+    [SerializeField] private WinCondition winCondition;
     [SerializeField] private VIDE_Assign videAssign;
     [SerializeField] private Template_UIManager templateUI;
     [SerializeField] private GameObject mask;
@@ -42,7 +43,7 @@ public class Interactable : MonoBehaviour
             if (this.transform.parent.name == "Lion")
             {
                 MusicManager.Instance.SetCharacterLion();
-                if (currentMask == null || currentMask.gameObject != mask.gameObject)
+                if (currentMask == null || currentMask.gameObject != mask.gameObject || winCondition.IsLionSuccess)
                 {
                     videAssign.overrideStartNode = 4;
                 }
@@ -55,19 +56,24 @@ public class Interactable : MonoBehaviour
             else if (this.transform.parent.name == "Ox")
             {
                 MusicManager.Instance.SetCharacterOx();
-                if (currentMask == null || currentMask.gameObject != mask.gameObject)
+                Debug.Log("mask.gameObject " + mask.gameObject);
+                Debug.Log("currentMask " + currentMask);
+                if (currentMask == null || currentMask.gameObject != mask.gameObject || winCondition.IsOxSuccess)
                 {
                     videAssign.overrideStartNode = 0;
+
+                    Debug.Log("Here");
                 }
                 else if (currentMask.gameObject == mask.gameObject)
                 {
                     videAssign.overrideStartNode = 1;
+                    Debug.Log("La");
                 }
             }
             else if (this.transform.parent.name == "Deer")
             {
                 MusicManager.Instance.SetCharacterStag();
-                if (currentMask == null || currentMask.gameObject != mask.gameObject)
+                if (currentMask == null || currentMask.gameObject != mask.gameObject || winCondition.IsDeerSuccess)
                 {
                     videAssign.overrideStartNode = 33;
                 }

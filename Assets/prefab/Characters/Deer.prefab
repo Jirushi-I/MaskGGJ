@@ -248,11 +248,8 @@ MonoBehaviour:
   maskmanager: {fileID: 0}
   videAssign: {fileID: 0}
   templateUI: {fileID: 0}
-  interact: {fileID: 0}
   mask: {fileID: 0}
-  others:
-  - {fileID: 0}
-  - {fileID: 0}
+  interact: {fileID: 0}
 --- !u!114 &3522016203805317294
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -289,7 +286,7 @@ MonoBehaviour:
   interactionCount: 0
   alias: Mister Deer
   overrideStartNode: -1
-  defaultNPCSprite: {fileID: 21300000, guid: 83621f3be95e29c4eb698613231bc89c, type: 3}
+  defaultNPCSprite: {fileID: 21300000, guid: 7889524cdb6a1384eab9103e92fe788a, type: 3}
   defaultPlayerSprite: {fileID: 21300000, guid: ca1397691a4e7d54e88268b636508a09, type: 3}
   targetManager: {fileID: 0}
   preload: 0

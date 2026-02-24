@@ -3,28 +3,24 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 public class WinCondition : MonoBehaviour
 {
-    [SerializeField] private GameObject gameOver;
+    [SerializeField] private GameObject gameWin;
     private int counter = 0;
+
+    public bool IsLionSuccess { get; set; } = false;
+    public bool IsOxSuccess { get; set; } = false;
+    public bool IsDeerSuccess { get; set; } = false;
 
     public void Progress()
     {
         counter++;
-        //LocalMusicManager.PlaySucceedSound();
         if (counter < 3) {
             SignalManager.Instance.EmitOnUnlockTheMask();
         }
         if (counter == 3)
         {
-            gameOver.SetActive(true);
+            gameWin.SetActive(true);
         }
     }
 
-    //void Update() {
 
-    //     if (Keyboard.current.digit7Key.wasPressedThisFrame) {
-    //        SignalManager.Instance.EmitOnUnlockTheMask();
-    //    }else if (Keyboard.current.digit8Key.wasPressedThisFrame) {
-    //        SignalManager.Instance.EmitOnUnlockTheMaskSpecific("Deer");
-    //    }
-    //}
 }
