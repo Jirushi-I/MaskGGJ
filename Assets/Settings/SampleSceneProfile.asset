@@ -174,14 +174,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.RenderPipelines.Universal.Runtime::UnityEngine.Rendering.Universal.SplitToning
   active: 1
   shadows:
-    m_OverrideState: 0
-    m_Value: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+    m_OverrideState: 1
+    m_Value: {r: 0.36629513, g: 0.36222854, b: 0.41509432, a: 1}
   highlights:
-    m_OverrideState: 0
-    m_Value: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+    m_OverrideState: 1
+    m_Value: {r: 0.9056604, g: 0.508366, b: 0.508366, a: 1}
   balance:
-    m_OverrideState: 0
-    m_Value: 0
+    m_OverrideState: 1
+    m_Value: 5
 --- !u!114 &4888506308155113966
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -200,7 +200,7 @@ MonoBehaviour:
     m_Value: {x: 1, y: 0.9238768, z: 0.9743792, w: 0.13761467}
   midtones:
     m_OverrideState: 1
-    m_Value: {x: 1, y: 0.8310433, z: 0.9909002, w: 0.045871552}
+    m_Value: {x: 0.8890145, y: 0.8533951, z: 1, w: 0.045871552}
   highlights:
     m_OverrideState: 1
     m_Value: {x: 1, y: 0, z: 0.33617687, w: 0.43577975}
