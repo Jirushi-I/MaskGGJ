@@ -85,7 +85,7 @@ public class MaskManager : MonoBehaviour {
 
 
         if (lockedMasks.Length == 0) {
-            Debug.Log("Tous les masques sont d�j� d�bloqu�s !");
+            //Debug.Log("Tous les masques sont d�j� d�bloqu�s !");
             return null;
         }
 
@@ -105,9 +105,9 @@ public class MaskManager : MonoBehaviour {
             FMODUnity.RuntimeManager.PlayOneShot("event:/Succeed");
             FMODUnity.RuntimeManager.StudioSystem.setParameterByName("SucceedDialogue", 1);
 
-            Debug.Log("Nouveau masque d�bloqu� : " + newMask.name);
+            //Debug.Log("Nouveau masque d�bloqu� : " + newMask.name);
         } else {
-            Debug.Log("Aucun nouveau masque � d�bloquer");
+            //Debug.Log("Aucun nouveau masque � d�bloquer");
             return;
         }
         newMask.Unlock();

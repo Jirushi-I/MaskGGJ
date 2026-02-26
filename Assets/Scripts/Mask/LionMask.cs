@@ -21,7 +21,7 @@ public class LionMask : Mask
         imageMask.sprite = spriteMasks;
         filterColorImage.color = lionFilterColors;
         UpdateMaterial();
-        Debug.Log(maskName + " is Applied");
+        //Debug.Log(maskName + " is Applied");
     }
 
     protected override void RemoveCameraEffect() {
@@ -30,7 +30,7 @@ public class LionMask : Mask
 
         imageMask.sprite = imageDefaultMask;
         filterColorImage.color = defaultFilterColors;
-        Debug.Log(maskName + " is removed");
+        //Debug.Log(maskName + " is removed");
     }
 
     protected override void UpdateMaterial() {

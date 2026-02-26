@@ -30,7 +30,7 @@ public class DeerMask : Mask {
 
         imageMask.sprite = imageDefaultMask;
         filterColorImage.color = defaultFilterColors;
-        Debug.Log(maskName + " is removed");
+        //Debug.Log(maskName + " is removed");
     }
 
     protected override void UpdateMaterial() {

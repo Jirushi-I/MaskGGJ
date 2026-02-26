@@ -5,10 +5,10 @@ using UnityEngine.SceneManagement;
 public class LoadScene : MonoBehaviour
 {
     private string SCENE_GAME = "Scenes/BU/BU_SCENE_DOMI";
-
     private string SCENE_MAIN_MENU = "Scenes/Game Start/MainMenu";
 
     void Start() {
+        Time.timeScale = 1f;
         Cursor.visible = true;
     }
 

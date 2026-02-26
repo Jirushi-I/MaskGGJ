@@ -9,7 +9,6 @@ public class DialogueManager : MonoBehaviour {
 
     [SerializeField] private MaskManager maskManager;
 
-
     public Sprite GetCurrentMaskSprite() {
         if (maskManager == null) return noMaskSprite;
 

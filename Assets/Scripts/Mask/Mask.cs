@@ -34,7 +34,7 @@ public abstract class Mask: MonoBehaviour {
     public virtual void Equip()
     {
         if (!isUnlock)
-            Debug.Log(maskName + " is not unlock yet ");
+            Debug.LogWarning(maskName + " is not unlock yet ");
 
         if (!isEquipped && isUnlock)
         {
@@ -66,17 +66,18 @@ public abstract class Mask: MonoBehaviour {
             isEquipped = false;
             //visualMask?.SetActive(false);
             MusicManager.Instance.SetMaskNone();
-            Debug.Log("Unequipped " + maskName);
+            //Debug.Log("Unequipped " + maskName);
         }
 
     }
     public virtual void Unlock() {
         if (isUnlock) {
-            Debug.Log(maskName + " is already unlock");
+            //Debug.Log(maskName + " is already unlock");
+            return;
         }
 
         isUnlock = true;
-        Debug.Log(maskName + " is unlock");
+        //Debug.Log(maskName + " is unlock");
     }
 
     protected abstract void ApplyCameraEffect();

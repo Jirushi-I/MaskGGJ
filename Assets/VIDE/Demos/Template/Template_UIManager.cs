@@ -76,7 +76,7 @@ public class Template_UIManager : MonoBehaviour
     public void Interact(VIDE_Assign dialogue)
     {
         if(_isOnCooldown && !VD.isActive) {
-            Debug.Log("Still on cooldown");
+            //Debug.Log("Still on cooldown");
             return;
         }
 
@@ -403,12 +403,12 @@ public class Template_UIManager : MonoBehaviour
 
     private IEnumerator DialogueCoolDown() {
         _isOnCooldown = true;
-        Debug.Log("Dialogue cooldown started...");
+        //Debug.Log("Dialogue cooldown started...");
 
         yield return new WaitForSeconds(dialogueCooldown);
 
         _isOnCooldown = false;
-        Debug.Log("Can talk again!");
+        //Debug.Log("Can talk again!");
     }
 
     #endregion

@@ -84,14 +84,7 @@ public class Interactable : MonoBehaviour
             FMODUnity.RuntimeManager.PlayOneShot("event:/Interact");
             FMODUnity.RuntimeManager.StudioSystem.setParameterByName("SucceedDialogue", 0);
 
-            if (player != null)
-            {
-                CharacterController controller = player;
-                if (controller != null)
-                {
-                    controller.enabled = false;
-                }
-            }
+            gameManager.ControllerEnabled(false, player);
 
             templateUI.Interact(videAssign);
             templateUI.enabled = true;
@@ -102,13 +95,13 @@ public class Interactable : MonoBehaviour
 
     public void ResetPlayer()
     {
-        player.enabled = true;
+        gameManager.ControllerEnabled(true, player);
         FMODUnity.RuntimeManager.PlayOneShot("event:/Fail");
         gameManager.VisibleCursor(false);
     }
 
     public void CompletDialoguePlayer() {
-        player.enabled = true;
+        gameManager.ControllerEnabled(true, player);
         FMODUnity.RuntimeManager.PlayOneShot("event:/Succeed");
         gameManager.VisibleCursor(false);
     }

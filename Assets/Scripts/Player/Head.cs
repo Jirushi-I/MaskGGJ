@@ -20,7 +20,6 @@ public class Head : MonoBehaviour {
     {
         if (player.enabled == false) return;
 
-
         Vector2 input = context.ReadValue<Vector2>() * sensitivity * Time.deltaTime;
 
         yaw += input.x;
@@ -29,7 +28,6 @@ public class Head : MonoBehaviour {
 
         transform.rotation = Quaternion.Euler(pitch, yaw, 0f);
     }
-
 
     // Méthode pour synchroniser yaw/pitch avec la rotation actuelle
     public void SyncRotationValues() {
@@ -40,5 +38,4 @@ public class Head : MonoBehaviour {
         // Normalise pitch
         if (pitch > 180) pitch -= 360;
     }
-
 }
