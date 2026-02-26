@@ -445,6 +445,9 @@
 		<property name="triggerConditionMode">
 			<value>1</value>
 		</property>
+		<property name="looping">
+			<value>2</value>
+		</property>
 		<relationship name="timeline">
 			<destination>{41cef73b-5853-4136-8918-b9282c6719b4}</destination>
 		</relationship>
